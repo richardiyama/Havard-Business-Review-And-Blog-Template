@@ -1,0 +1,49 @@
+﻿
+@model IEnumerable<DigitalAfricaMediumClient.Models.About>
+@{
+    ViewBag.Title = "About";
+}
+
+@foreach (var item in Model)
+{
+ <!-- ABOUT US INTRODUCTION -->
+<section>
+    <!-- .container -->
+    <div class="container">
+        <!-- .row -->
+        <div class="row">
+            <!-- .col-md-12 -->
+            <div class="col-md-12">
+                <!-- .row -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h1 class="text-uppercase text-primary wow fadeInDown text-center" data-wow-duration=".8s" data-wow-delay=".2s">@Html.DisplayFor(modelItem => item.Title)</h1>
+                        <div class="text-center">
+                            <span class="separator">
+                                <i class="icon icon-small iline2-bulb11 text-primary no-margin"></i>
+                            </span>
+                        </div>
+                        <p class="text-center">
+                            <i class="text-muted text-capitalize">@Html.DisplayFor(modelItem => item.SubTitle)</i>
+                        </p>
+                        <p class="text-center">
+                            <span class="line-sep-gray align-center"></span>
+                        </p>
+                        <p class="wow fadeInUp text-center" data-wow-duration="1s" data-wow-delay=".3s">
+                            @Html.DisplayFor(modelItem => item.Content)
+                        </p>
+                        
+                    </div>
+                    <!-- /.col-md-12 -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.col-md-12 -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</section>
+<!-- ABOUT US INTRODUCTION END -->
+
+}

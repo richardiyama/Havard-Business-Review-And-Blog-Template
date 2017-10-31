@@ -1,0 +1,946 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+    <!-- Style Customizer -->
+    <section id="style-customizer">
+        <div class="style-customizer-wrap form-horizontal">
+            <h4 class="sc-header uppercase">Style Customizer</h4>
+            <h5 class="uppercase">Layout Style</h5>
+            <div class="sc-variable-row form-group">
+                <div class="radio-group col-xs-12">
+                    <span class="fancyInput fancyInput--radio"><input type="radio" name="sc-layout-type" id="sc-layout-type-boxed" class="sc-variable" data-key="layoutType" value="boxed" checked=""><span class="fancyInput__base"></span><span class="fancyInput__check"></span></span>
+                    <span class="fancyInput fancyInput--radio checked"><input type="radio" name="sc-layout-type" id="sc-layout-type-wide" class="sc-variable" data-key="layoutType" value="wide"><span class="fancyInput__base"></span><span class="fancyInput__check"></span></span>
+                    <label for="sc-layout-type-wide" class="style-fweight-normal">Wide</label>
+                    <label for="sc-layout-type-boxed" class="style-fweight-normal">Boxed</label>
+                </div>
+            </div>
+            <fieldset id="outer-bg-section">
+                <h5 class="customizer-style-tytle-padd">Outer Background Styles</h5>
+                <div class="sc-variable-row form-group">
+                    <div class="col-xs-12">
+                        <span class="fancyInput fancyInput--select">
+                            <select name="sc-bg-outer-type" id="sc-bg-outer-type" data-key="outerBgType" class="sc-variable col-xs-8">
+                                <option value="color" selected="">Solid color</option>
+                                <option value="pattern">Pattern</option>
+                            </select><span class="fancyInput__text">Solid color</span><span class="fancyInput__icon"></span>
+                        </span>
+                        <div class="col-xs-4">
+                            <div id="sc-bg-outer-color-wrap">
+                                <input type="color" name="sc-bg-outer-color" id="sc-bg-outer-color" class="sc-variable" data-key="outerBgColor">
+                            </div>
+                            <div id="sc-bg-outer-image-wrap">
+                                <input type="file" accept="image/*" name="sc-bg-outer-image" id="sc-bg-outer-image" class="sc-variable sr-only" data-key="outerBgImage">
+                                <label for="sc-bg-outer-image" class="sc-btn" title="Upload image"><i class="fi fi-upload"></i> </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <h5 class="customizer-style-tytle-padd">Color Options</h5>
+            <div class="sc-variable-row form-group style-form-group">
+                <label for="sc-color-prim" class="col-xs-8 control-label color-text">Primary Color</label>
+                <div class="col-xs-4">
+                    <input type="color" id="sc-color-prim" class="sc-variable" data-key="colorPrimary">
+                </div>
+            </div>
+            <div class="style-divider-line"></div>
+            <div class="sc-variable-row form-group style-form-group style-tpadd">
+                <label for="sc-color-second" class="col-xs-8 control-label color-text">Secondary Color</label>
+                <div class="col-xs-4">
+                    <input type="color" id="sc-color-second" class="sc-variable" data-key="colorHeader">
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <div class="col-xs-12">
+                    <button class="sc-btn" id="sc-download-css"><i class="fa fa-download"></i> Get CSS file</button>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div> <a class="sty-demo-btn" href="" target="_blank">Demos</a> </div>
+        </div>
+        <button id="sc-toggle" title="Styles Customizer"><i class="fi fi-settings-box"></i> </button>
+    </section>
+    <div class="modal fade" tabindex="-1" role="dialog" id="afterSaveCSSFileModal" aria-labelledby="afterSaveCSSFileModalLabel">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title" id="afterSaveCSSFileModalLabel">File saved</h4>
+                </div>
+                <div class="modal-body">
+                    In order to apply the generated custom styles to your template, please follow these steps:
+                    <ol>
+                        <li class="sc-after-save-todo-point-file">Upload the "skin.css" file to "css" directory in your template</li>
+                        <li class="sc-after-save-todo-point-image">Upload the image file to "img" directory in your template. Keep the image file name unchanged.</li>
+                        <li class="sc-after-save-todo-point-stylesheet-code">
+                            Copy this code and paste it into "index.html" file in your template, after the line marked as <code>&lt;!-- Skin stylesheet --&gt;</code>
+                            <pre><code>&lt;link rel="stylesheet" href="~/Content/skin.css"&gt;</code></pre>
+                        </li>
+                        <li class="sc-after-save-todo-point-preloader">
+                            Copy this code and paste it into "index.html" file in your template, after the line marked as <code>&lt;!-- Preloader icon --&gt;</code>
+                            <pre><code class="sc-preloader-html"></code></pre>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Style customizer END -->
+    <link href="~/Content/mdi.css" rel="stylesheet" type="text/css">
+    <div id="st-bgimg"></div>
+    <!-- skip to content -->
+    <a href="" class="skiplink" style="display: none">Skip to content</a>
+    <div class="wrapper-boxed">
+        <div class="navbar-wrapper clearfix">
+            <div class="container clearfix">
+                <!-- Branding: LOGO -->
+                <div class="branding">
+                   
+                        <h1>Sme Community</h1>
+
+                   
+                    <p class="site-description"></p>
+                </div>
+
+
+                <div class="stickyContainer" style="height: 65px;">
+                    <div class="utility-bar clearfix stickyItem stuck" role="menubar" style="left: 0px;">
+                        <div class="">
+                            <a href="javascript:void(0)" class="offbulletin-toggle offbulletin-navigation-toggle">
+                                <span class="icon-menu-bars"><span class="bar-1"></span><span class="bar-2"></span><span class="bar-3"></span></span>
+                            </a>
+                            <ul class="navigation top-nav list-unstyled">
+
+                                <!-- Forum Index -->
+                                <li class="nav-item nav-forum">
+                                    <a href="">Forum</a>
+                                </li>
+                                <!-- FAQ -->
+                                <li class="nav-item">
+                                    <a href="" rel="help" title="Frequently Asked Questions">FAQ</a>
+                                </li>
+                                <li class="nav-item quick-links dd-container">
+                                    <a href="javascript:void(0)" id="quickLinksdrop" title="Quick links" class="quick-links-dropdown-trigger" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="icon-menu-bars"><span class="bar-1"></span><span class="bar-2"></span><span class="bar-3"></span></span>
+                                        <span class="quick-links-label">Quick links</span>
+                                    </a>
+                                    <ul class="quick-links-dropdown dropdown-menu" role="menu" aria-labelledby="quickLinksdrop">
+
+
+
+                                        <li role="presentation"><a href="" role="menuitem" tabindex="-1">Unanswered topics</a></li>
+                                        <li role="presentation"><a href="" role="menuitem" tabindex="-1">Active topics</a></li>
+                                        <li role="presentation" class="divider"></li>
+                                        <li role="presentation"><a href="http://uidevi.com/bulletin/search.php?sid=9c55c93f78af46abb7827a977d0edc3c" role="menuitem" tabindex="-1">Search</a></li>
+
+                                        <!--<li role="presentation"><a href="/bulletin/app.php/help/faq?sid=9c55c93f78af46abb7827a977d0edc3c" rel="help" title="Frequently Asked Questions" role="menuitem" tabindex="-1">FAQ</a></li>-->
+                                        <li role="presentation"><a href="http://uidevi.com/bulletin/memberlist.php?mode=team&amp;sid=9c55c93f78af46abb7827a977d0edc3c" role="menuitem" tabindex="-1">The team</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <div class="user-area">
+                                <ul class="guest-view list-unstyled has-register">
+
+
+                                    <li class="guest-register"><a class="btn btn-link" href="http://uidevi.com/bulletin/ucp.php?mode=register&amp;sid=9c55c93f78af46abb7827a977d0edc3c" role="menuitem">Register</a></li>
+                                    <li class="guest-login quicklogin dd-container">
+                                        <a class="btn btn-link" href="http://uidevi.com/bulletin/ucp.php?mode=login&amp;sid=9c55c93f78af46abb7827a977d0edc3c" data-toggle="dropdown" title="Login" accesskey="x" role="menuitem">Login</a>
+                                        <div class="quicklogin-dropdown dropdown-menu" role="menu">
+                                            <form method="post" action="http://uidevi.com/bulletin/ucp.php?mode=login&amp;sid=9c55c93f78af46abb7827a977d0edc3c" class="quicklogin-form">
+
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="fi fi-account"></i></span>
+                                                    <input type="text" name="username" id="QL_username" class="quicklogin__username-input form-control" placeholder="Username">
+                                                </div>
+
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="fi fi-key"></i></span>
+                                                    <input type="password" name="password" id="QL_password" class="quicklogin__password-input form-control" placeholder="Password">
+                                                </div>
+
+                                                <div class="checkbox">
+                                                    <label class="fancyInput_label">
+                                                        <span class="fancyInput fancyInput--checkbox"><input type="checkbox" name="autologin"><span class="fancyInput__base"></span><span class="fancyInput__check"></span></span> Remember me
+                                                    </label>
+                                                </div>
+
+                                                <input type="submit" name="login" value="Login" class="quicklogin__login-btn btn btn-success">
+
+                                                <a class="quicklogin__forgot" href="http://uidevi.com/bulletin/ucp.php?mode=sendpassword&amp;sid=9c55c93f78af46abb7827a977d0edc3c">I forgot my password</a>
+
+                                                <input type="hidden" name="redirect" value="./index.php?sid=9c55c93f78af46abb7827a977d0edc3c">
+
+                                            </form>
+                                        </div>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="content-wrap">
+                    <div class="columns welcome">
+                        <div class="col2 table">
+                            <div class="frontpage">
+                                <h2 class="nomargin">Welcome To Board!</h2>
+                                <p class="lead">No other bulletin board software offers a <strong>greater complement</strong> of features, while maintaining efficiency and ease of use. </p>
+                                <p class="btns"> <a class="btn btn-blue" href="http://uidevi.com/bulletin/memberlist.php?sid=9c55c93f78af46abb7827a977d0edc3c" style="transform-origin: 250px center 0px; transform: rotate(0deg); opacity: 1;">Members</a> <a class="btn" href="http://uidevi.com/bulletin/search.php?search_id=active_topics&amp;sid=9c55c93f78af46abb7827a977d0edc3c" style="transform-origin: 250px center 0px; transform: rotate(0deg); opacity: 1;">Active topics</a> <a class="btn btn-green replay" href="http://uidevi.com/bulletin/search.php?sid=9c55c93f78af46abb7827a977d0edc3c" style="display: inline; transform-origin: 250px center 0px; transform: rotate(0deg); opacity: 1;">Search</a> </p>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        </div>
+        <div class="bulletin-main-wrapper">
+            <div class="bulletin-main-content">
+                <a href="javascript:void(0)" class="offbulletin-toggle offbulletin-backlink"> <i class="fi fi-arrow-left"></i> </a>
+
+                <div id="search-box" class="quicksearch">
+                    <form action="http://uidevi.com/bulletin/search.php?sid=9c55c93f78af46abb7827a977d0edc3c" method="get" id="search">
+                        <fieldset>
+                            <div class="quicksearch__placeholder">Search…</div>
+                            <input name="keywords" id="keywords" type="search" maxlength="128" title="Search for keywords" class="form-control" size="20" value="">
+                            <button class="btn btn-default quicksearch-go hidden" type="submit" title="Search">Search</button>
+                            <a href="http://uidevi.com/bulletin/search.php?sid=9c55c93f78af46abb7827a977d0edc3c" class="btn btn-link quicksearch-advanced hidden" title="Advanced search"><i class="glyphicon glyphicon-cog"></i></a>
+                            <input type="hidden" name="sid" value="9c55c93f78af46abb7827a977d0edc3c">
+                        </fieldset>
+                    </form>
+                </div>
+
+                <a href="javascript:void(0)" class="offbulletin-toggle offbulletin-navigation-toggle">
+                    <span class="icon-menu-bars"><span class="bar-1"></span><span class="bar-2"></span><span class="bar-3"></span></span>
+                </a>
+                <ul class="navigation top-nav list-unstyled">
+
+                    <!-- Forum Index -->
+                    <li class="nav-item nav-forum">
+                        <a href="http://uidevi.com/bulletin/index.php?sid=9c55c93f78af46abb7827a977d0edc3c">Forum</a>
+                    </li>
+                    <!-- FAQ -->
+                    <li class="nav-item">
+                        <a href="http://uidevi.com/bulletin/app.php/help/faq?sid=9c55c93f78af46abb7827a977d0edc3c" rel="help" title="Frequently Asked Questions">FAQ</a>
+                    </li>
+                    <li class="nav-item quick-links dd-container">
+                        <a href="javascript:void(0)" id="quickLinksdrop" title="Quick links" class="quick-links-dropdown-trigger" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="icon-menu-bars"><span class="bar-1"></span><span class="bar-2"></span><span class="bar-3"></span></span>
+                            <span class="quick-links-label">Quick links</span>
+                        </a>
+                        <ul class="quick-links-dropdown dropdown-menu" role="menu" aria-labelledby="quickLinksdrop">
+
+
+
+                            <li role="presentation"><a href="http://uidevi.com/bulletin/search.php?search_id=unanswered&amp;sid=9c55c93f78af46abb7827a977d0edc3c" role="menuitem" tabindex="-1">Unanswered topics</a></li>
+                            <li role="presentation"><a href="http://uidevi.com/bulletin/search.php?search_id=active_topics&amp;sid=9c55c93f78af46abb7827a977d0edc3c" role="menuitem" tabindex="-1">Active topics</a></li>
+                            <li role="presentation" class="divider"></li>
+                            <li role="presentation"><a href="http://uidevi.com/bulletin/search.php?sid=9c55c93f78af46abb7827a977d0edc3c" role="menuitem" tabindex="-1">Search</a></li>
+
+                            <!--<li role="presentation"><a href="/bulletin/app.php/help/faq?sid=9c55c93f78af46abb7827a977d0edc3c" rel="help" title="Frequently Asked Questions" role="menuitem" tabindex="-1">FAQ</a></li>-->
+                            <li role="presentation"><a href="http://uidevi.com/bulletin/memberlist.php?mode=team&amp;sid=9c55c93f78af46abb7827a977d0edc3c" role="menuitem" tabindex="-1">The team</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+
+            </div>
+            <div class="bulletin-on-content">
+                <div id="wrap">
+                    <a id="top" class="anchor" accesskey="t"></a>
+                    <div class="clearfix">
+                        <header class="main-header">
+                            <div class=""> </div>
+                        </header>
+
+                        <div id="page-body">
+                            <div class="container">
+
+                                <div class="breadcrumbs-bar breadcrumbs-bar--top ">
+
+                                    <ol class="nav-breadcrumbs">
+
+
+
+
+
+                                        <li class="crumb crumb--home crumb--previous" itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="">
+                                            <a href="http://uidevi.com/bulletin/index.php?sid=9c55c93f78af46abb7827a977d0edc3c" itemprop="url" accesskey="h" data-navbar-reference="index" title="Board index"><span itemprop="title">Board index</span></a>
+                                        </li>
+                                    </ol>
+                                </div>
+
+
+
+
+
+                                <a id="start__content" class="anchor"></a>
+
+                                <!-- Global Alerts -->
+                                <!-- REMOVE THIS LINE TO ENABLE
+
+                                <div class="alert alert-info alert-dismissible fade in" role="alert" id="globalAlertExample1">
+                                  <a href="javascript:void(0)" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+
+                                  This alert shows on all pages. Feel free to edit this text
+
+                                </div>
+
+                                REMOVE THIS LINE TO ENABLE -->
+                                <!-- Index Alerts -->
+                                <!-- REMOVE THIS LINE TO ENABLE
+
+                                <div class="alert alert-info alert-dismissible fade in" role="alert" id="indexAlertExample">
+                                  <a href="javascript:void(0)" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+
+                                  This notice will only appear on forum index. Feel free to edit this text
+
+                                </div>
+
+                                REMOVE THIS LINE TO ENABLE -->
+                                <div class="big-grid no-sidebar">
+                                    <div class="col-maincontent">
+
+
+
+                                        <div class="category-wrapper">
+                                            <div class="category-header" style="">
+                                                <a class="category-title" href="http://uidevi.com/bulletin/viewforum.php?f=1&amp;sid=9c55c93f78af46abb7827a977d0edc3c">Latest Updates</a>			<a href="javascript:void(0)" class="close" data-toggle="collapse" data-target="#forum-1" aria-expanded="true" aria-controls="forum-1"></a>
+                                            </div>
+
+                                            <div class="category-inner collapse in" id="forum-1">
+                                                <ol class="itemlist itemlist--forums itemlist--forums--full">
+
+
+
+
+
+                                                    <li class="itemlist__item forum_read ">
+                                                        <div class="item-inner">
+
+                                                            <div class="item-col-icon" title="No unread posts">
+                                                                <i class="fi item-icon"></i>
+
+                                                            </div>
+
+                                                            <div class="item-col-main">
+
+                                                                <a class="item-title" href="http://uidevi.com/bulletin/viewforum.php?f=2&amp;sid=9c55c93f78af46abb7827a977d0edc3c">Stakes could not be higher as America chooses Clinton or Trump</a>
+
+
+                                                                <span class="item-info">
+                                                                    The world watches and waits while America chooses its next president. We are told every time that the outcome will affect us all. This time it really will. The decision taken by American voters will have implications for all of us for years to come. The post-war world order that has guaranteed our security and prosperity for decades could be at stake.<br>
+                                                                    <br>
+                                                                    :: Clinton v Trump: Latest polling and battleground states<br>
+                                                                    <br>
+                                                                    Donald Trump has shown little interest in the institutions painstakingly set up after World War Two and spoken blithely of ripping up trade agreements and undermining western alliances.
+                                                                </span>
+
+
+                                                                <span class="item-lastpost--inline">
+                                                                    <span class="lastpost-label-inline">Last post<!--:--></span>
+                                                                    <!--<a href="./viewtopic.php?f=2&amp;p=43&amp;sid=9c55c93f78af46abb7827a977d0edc3c#p43" title="dieta na przyrost masy miesniowej" class="lastsubject-inline">dieta na przyrost masy miesni…</a>-->
+                                                                    by <span class="username">RobertBam</span>,
+                                                                    <a href="http://uidevi.com/bulletin/viewtopic.php?f=2&amp;p=43&amp;sid=9c55c93f78af46abb7827a977d0edc3c#p43"><span class="timestamp" title="Thu Oct 19, 2017 5:49 am">Yesterday, 5:49 am</span></a>
+                                                                </span>
+
+                                                                <div class="item-stats--inline">
+                                                                    <span class="item-stat item-stat--topics">
+                                                                        <span class="item-stat__count formatted-numcounter">8</span>
+                                                                        <span class="item-stat__label">Topics</span>
+                                                                    </span>
+                                                                    <span class="item-stat item-stat--posts">
+                                                                        <span class="item-stat__count formatted-numcounter">13</span>
+                                                                        <span class="item-stat__label">Posts</span>
+                                                                    </span>
+                                                                </div>
+
+
+
+                                                            </div>
+
+                                                            <a class="item-col-feed" title="Feed - Stakes could not be higher as America chooses Clinton or Trump" href="http://uidevi.com/bulletin/app.php/feed?sid=9c55c93f78af46abb7827a977d0edc3c?f=2"><i class="fi fi-rss"></i></a>
+
+                                                            <div class="item-col-stats">
+                                                                <span class="item-stat item-stat--topics">
+                                                                    <span class="item-stat__count formatted-numcounter">8</span>
+                                                                    <span class="item-stat__label">Topics</span>
+                                                                </span>
+                                                                <span class="item-stat item-stat--posts">
+                                                                    <span class="item-stat__count formatted-numcounter">13</span>
+                                                                    <span class="item-stat__label">Posts</span>
+                                                                </span>
+                                                            </div>
+
+                                                            <div class="item-col-lastpost">
+
+                                                                <a href="http://uidevi.com/bulletin/viewtopic.php?f=2&amp;p=43&amp;sid=9c55c93f78af46abb7827a977d0edc3c#p43" title="dieta na przyrost masy miesniowej" class="item-lastpost__title">dieta na przyrost masy miesni…</a>
+
+                                                                <div class="item-lastpost__info">
+                                                                    by <span class="username">RobertBam</span>
+                                                                    <span class="item-lastpost__time timestamp" title="Thu Oct 19, 2017 5:49 am">Yesterday, 5:49 am</span>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </li>
+
+
+
+
+                                                    <li class="itemlist__item forum_read ">
+                                                        <div class="item-inner">
+
+                                                            <div class="item-col-icon" title="No unread posts">
+                                                                <i class="fi item-icon"></i>
+
+                                                            </div>
+
+                                                            <div class="item-col-main">
+
+                                                                <a class="item-title" href="http://uidevi.com/bulletin/viewforum.php?f=3&amp;sid=9c55c93f78af46abb7827a977d0edc3c">Clinton has edge over Trump as Americans vote in US election</a>
+
+
+                                                                <span class="item-info">The frantic campaigning behind them, Hillary Clinton and Donald Trump go back to New York as America finally has its say.</span>
+
+
+                                                                <span class="item-lastpost--inline">
+                                                                    <span class="lastpost-label-inline">Last post<!--:--></span>
+                                                                    <!--<a href="./viewtopic.php?f=3&amp;p=13&amp;sid=9c55c93f78af46abb7827a977d0edc3c#p13" title="Re: Mistaken idea of denouncing pleasure" class="lastsubject-inline">Re: Mistaken idea of denounci…</a>-->
+                                                                    by <a href="http://uidevi.com/bulletin/memberlist.php?mode=viewprofile&amp;u=2&amp;sid=9c55c93f78af46abb7827a977d0edc3c" style="color: #AA0000;" class="username-coloured">admin</a>,
+                                                                    <a href="http://uidevi.com/bulletin/viewtopic.php?f=3&amp;p=13&amp;sid=9c55c93f78af46abb7827a977d0edc3c#p13"><span class="timestamp" title="Fri May 19, 2017 5:01 am">5 months ago</span></a>
+                                                                </span>
+
+                                                                <div class="item-stats--inline">
+                                                                    <span class="item-stat item-stat--topics">
+                                                                        <span class="item-stat__count formatted-numcounter">3</span>
+                                                                        <span class="item-stat__label">Topics</span>
+                                                                    </span>
+                                                                    <span class="item-stat item-stat--posts">
+                                                                        <span class="item-stat__count formatted-numcounter">7</span>
+                                                                        <span class="item-stat__label">Posts</span>
+                                                                    </span>
+                                                                </div>
+
+
+
+                                                            </div>
+
+                                                            <a class="item-col-feed" title="Feed - Clinton has edge over Trump as Americans vote in US election" href="http://uidevi.com/bulletin/app.php/feed?sid=9c55c93f78af46abb7827a977d0edc3c?f=3"><i class="fi fi-rss"></i></a>
+
+                                                            <div class="item-col-stats">
+                                                                <span class="item-stat item-stat--topics">
+                                                                    <span class="item-stat__count formatted-numcounter">3</span>
+                                                                    <span class="item-stat__label">Topics</span>
+                                                                </span>
+                                                                <span class="item-stat item-stat--posts">
+                                                                    <span class="item-stat__count formatted-numcounter">7</span>
+                                                                    <span class="item-stat__label">Posts</span>
+                                                                </span>
+                                                            </div>
+
+                                                            <div class="item-col-lastpost">
+
+                                                                <a href="http://uidevi.com/bulletin/viewtopic.php?f=3&amp;p=13&amp;sid=9c55c93f78af46abb7827a977d0edc3c#p13" title="Re: Mistaken idea of denouncing pleasure" class="item-lastpost__title">Re: Mistaken idea of denounci…</a>
+
+                                                                <div class="item-lastpost__info">
+                                                                    by <a href="http://uidevi.com/bulletin/memberlist.php?mode=viewprofile&amp;u=2&amp;sid=9c55c93f78af46abb7827a977d0edc3c" style="color: #AA0000;" class="username-coloured">admin</a>
+                                                                    <span class="item-lastpost__time timestamp" title="Fri May 19, 2017 5:01 am">5 months ago</span>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </li>
+
+
+
+
+                                                    <li class="itemlist__item forum_read ">
+                                                        <div class="item-inner">
+
+                                                            <div class="item-col-icon" title="No unread posts">
+                                                                <i class="fi item-icon"></i>
+
+                                                            </div>
+
+                                                            <div class="item-col-main">
+
+                                                                <a class="item-title" href="http://uidevi.com/bulletin/viewforum.php?f=5&amp;sid=9c55c93f78af46abb7827a977d0edc3c">How To Spark A UX Revolution</a>
+
+
+                                                                <span class="item-info">On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.</span>
+
+
+                                                                <span class="item-lastpost--inline">
+                                                                    <span class="lastpost-label-inline">Last post<!--:--></span>
+                                                                    <!--<a href="./viewtopic.php?f=5&amp;p=45&amp;sid=9c55c93f78af46abb7827a977d0edc3c#p45" title="suplementy na mase" class="lastsubject-inline">suplementy na mase</a>-->
+                                                                    by <span class="username">RobertBam</span>,
+                                                                    <a href="http://uidevi.com/bulletin/viewtopic.php?f=5&amp;p=45&amp;sid=9c55c93f78af46abb7827a977d0edc3c#p45"><span class="timestamp" title="Thu Oct 19, 2017 5:52 am">Yesterday, 5:52 am</span></a>
+                                                                </span>
+
+                                                                <div class="item-stats--inline">
+                                                                    <span class="item-stat item-stat--topics">
+                                                                        <span class="item-stat__count formatted-numcounter">3</span>
+                                                                        <span class="item-stat__label">Topics</span>
+                                                                    </span>
+                                                                    <span class="item-stat item-stat--posts">
+                                                                        <span class="item-stat__count formatted-numcounter">5</span>
+                                                                        <span class="item-stat__label">Posts</span>
+                                                                    </span>
+                                                                </div>
+
+
+
+                                                            </div>
+
+                                                            <a class="item-col-feed" title="Feed - How To Spark A UX Revolution" href="http://uidevi.com/bulletin/app.php/feed?sid=9c55c93f78af46abb7827a977d0edc3c?f=5"><i class="fi fi-rss"></i></a>
+
+                                                            <div class="item-col-stats">
+                                                                <span class="item-stat item-stat--topics">
+                                                                    <span class="item-stat__count formatted-numcounter">3</span>
+                                                                    <span class="item-stat__label">Topics</span>
+                                                                </span>
+                                                                <span class="item-stat item-stat--posts">
+                                                                    <span class="item-stat__count formatted-numcounter">5</span>
+                                                                    <span class="item-stat__label">Posts</span>
+                                                                </span>
+                                                            </div>
+
+                                                            <div class="item-col-lastpost">
+
+                                                                <a href="http://uidevi.com/bulletin/viewtopic.php?f=5&amp;p=45&amp;sid=9c55c93f78af46abb7827a977d0edc3c#p45" title="suplementy na mase" class="item-lastpost__title">suplementy na mase</a>
+
+                                                                <div class="item-lastpost__info">
+                                                                    by <span class="username">RobertBam</span>
+                                                                    <span class="item-lastpost__time timestamp" title="Thu Oct 19, 2017 5:52 am">Yesterday, 5:52 am</span>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </li>
+
+
+                                                </ol>
+                                            </div><!-- category-inner END -->
+                                        </div><!-- category-wrapper END -->
+
+                                        <div class="category-wrapper">
+                                            <div class="category-header" style="">
+                                                <a class="category-title" href="http://uidevi.com/bulletin/viewforum.php?f=6&amp;sid=9c55c93f78af46abb7827a977d0edc3c">Top Links</a>			<a href="javascript:void(0)" class="close" data-toggle="collapse" data-target="#forum-6" aria-expanded="true" aria-controls="forum-6"></a>
+                                            </div>
+
+                                            <div class="category-inner collapse in" id="forum-6">
+                                                <ol class="itemlist itemlist--forums itemlist--forums--full">
+
+
+
+
+
+                                                    <li class="itemlist__item forum_read ">
+                                                        <div class="item-inner">
+
+                                                            <div class="item-col-icon" title="No unread posts">
+                                                                <i class="fi item-icon"></i>
+
+                                                            </div>
+
+                                                            <div class="item-col-main">
+
+                                                                <a class="item-title" href="http://uidevi.com/bulletin/viewforum.php?f=7&amp;sid=9c55c93f78af46abb7827a977d0edc3c">Sed ut perspiciatis unde omnis iste</a>
+
+
+                                                                <span class="item-info">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</span>
+
+
+                                                                <span class="item-lastpost--inline">
+                                                                    <span class="lastpost-label-inline">Last post<!--:--></span>
+                                                                    <!--<a href="./viewtopic.php?f=7&amp;p=46&amp;sid=9c55c93f78af46abb7827a977d0edc3c#p46" title="dieta na przyrost masy miesniowej" class="lastsubject-inline">dieta na przyrost masy miesni…</a>-->
+                                                                    by <span class="username">RobertBam</span>,
+                                                                    <a href="http://uidevi.com/bulletin/viewtopic.php?f=7&amp;p=46&amp;sid=9c55c93f78af46abb7827a977d0edc3c#p46"><span class="timestamp" title="Thu Oct 19, 2017 5:54 am">Yesterday, 5:54 am</span></a>
+                                                                </span>
+
+                                                                <div class="item-stats--inline">
+                                                                    <span class="item-stat item-stat--topics">
+                                                                        <span class="item-stat__count formatted-numcounter">3</span>
+                                                                        <span class="item-stat__label">Topics</span>
+                                                                    </span>
+                                                                    <span class="item-stat item-stat--posts">
+                                                                        <span class="item-stat__count formatted-numcounter">4</span>
+                                                                        <span class="item-stat__label">Posts</span>
+                                                                    </span>
+                                                                </div>
+
+
+
+                                                            </div>
+
+                                                            <a class="item-col-feed" title="Feed - Sed ut perspiciatis unde omnis iste" href="http://uidevi.com/bulletin/app.php/feed?sid=9c55c93f78af46abb7827a977d0edc3c?f=7"><i class="fi fi-rss"></i></a>
+
+                                                            <div class="item-col-stats">
+                                                                <span class="item-stat item-stat--topics">
+                                                                    <span class="item-stat__count formatted-numcounter">3</span>
+                                                                    <span class="item-stat__label">Topics</span>
+                                                                </span>
+                                                                <span class="item-stat item-stat--posts">
+                                                                    <span class="item-stat__count formatted-numcounter">4</span>
+                                                                    <span class="item-stat__label">Posts</span>
+                                                                </span>
+                                                            </div>
+
+                                                            <div class="item-col-lastpost">
+
+                                                                <a href="http://uidevi.com/bulletin/viewtopic.php?f=7&amp;p=46&amp;sid=9c55c93f78af46abb7827a977d0edc3c#p46" title="dieta na przyrost masy miesniowej" class="item-lastpost__title">dieta na przyrost masy miesni…</a>
+
+                                                                <div class="item-lastpost__info">
+                                                                    by <span class="username">RobertBam</span>
+                                                                    <span class="item-lastpost__time timestamp" title="Thu Oct 19, 2017 5:54 am">Yesterday, 5:54 am</span>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </li>
+
+
+
+
+                                                    <li class="itemlist__item forum_read ">
+                                                        <div class="item-inner">
+
+                                                            <div class="item-col-icon" title="No unread posts">
+                                                                <i class="fi item-icon"></i>
+
+                                                            </div>
+
+                                                            <div class="item-col-main">
+
+                                                                <a class="item-title" href="http://uidevi.com/bulletin/viewforum.php?f=8&amp;sid=9c55c93f78af46abb7827a977d0edc3c">At vero eos et accusamus</a>
+
+
+                                                                <span class="item-info">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</span>
+
+
+                                                                <span class="item-lastpost--inline">
+                                                                    <span class="lastpost-label-inline">Last post<!--:--></span>
+                                                                    <!--<a href="./viewtopic.php?f=8&amp;p=49&amp;sid=9c55c93f78af46abb7827a977d0edc3c#p49" title="poziom testosteronu" class="lastsubject-inline">poziom testosteronu</a>-->
+                                                                    by <a href="http://uidevi.com/bulletin/memberlist.php?mode=viewprofile&amp;u=77&amp;sid=9c55c93f78af46abb7827a977d0edc3c" class="username">RobertBam</a>,
+                                                                    <a href="http://uidevi.com/bulletin/viewtopic.php?f=8&amp;p=49&amp;sid=9c55c93f78af46abb7827a977d0edc3c#p49"><span class="timestamp" title="Fri Oct 20, 2017 7:55 am">9 hours ago</span></a>
+                                                                </span>
+
+                                                                <div class="item-stats--inline">
+                                                                    <span class="item-stat item-stat--topics">
+                                                                        <span class="item-stat__count formatted-numcounter">3</span>
+                                                                        <span class="item-stat__label">Topics</span>
+                                                                    </span>
+                                                                    <span class="item-stat item-stat--posts">
+                                                                        <span class="item-stat__count formatted-numcounter">6</span>
+                                                                        <span class="item-stat__label">Posts</span>
+                                                                    </span>
+                                                                </div>
+
+
+
+                                                            </div>
+
+                                                            <a class="item-col-feed" title="Feed - At vero eos et accusamus" href="http://uidevi.com/bulletin/app.php/feed?sid=9c55c93f78af46abb7827a977d0edc3c?f=8"><i class="fi fi-rss"></i></a>
+
+                                                            <div class="item-col-stats">
+                                                                <span class="item-stat item-stat--topics">
+                                                                    <span class="item-stat__count formatted-numcounter">3</span>
+                                                                    <span class="item-stat__label">Topics</span>
+                                                                </span>
+                                                                <span class="item-stat item-stat--posts">
+                                                                    <span class="item-stat__count formatted-numcounter">6</span>
+                                                                    <span class="item-stat__label">Posts</span>
+                                                                </span>
+                                                            </div>
+
+                                                            <div class="item-col-lastpost">
+
+                                                                <a href="http://uidevi.com/bulletin/viewtopic.php?f=8&amp;p=49&amp;sid=9c55c93f78af46abb7827a977d0edc3c#p49" title="poziom testosteronu" class="item-lastpost__title">poziom testosteronu</a>
+
+                                                                <div class="item-lastpost__info">
+                                                                    by <a href="http://uidevi.com/bulletin/memberlist.php?mode=viewprofile&amp;u=77&amp;sid=9c55c93f78af46abb7827a977d0edc3c" class="username">RobertBam</a>
+                                                                    <span class="item-lastpost__time timestamp" title="Fri Oct 20, 2017 7:55 am">9 hours ago</span>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </li>
+
+
+
+
+                                                    <li class="itemlist__item forum_read ">
+                                                        <div class="item-inner">
+
+                                                            <div class="item-col-icon" title="No unread posts">
+                                                                <i class="fi item-icon"></i>
+
+                                                            </div>
+
+                                                            <div class="item-col-main">
+
+                                                                <a class="item-title" href="http://uidevi.com/bulletin/viewforum.php?f=9&amp;sid=9c55c93f78af46abb7827a977d0edc3c">Lorem ipsum dolor</a>
+
+
+                                                                <span class="item-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+
+
+                                                                <span class="item-lastpost--inline">
+                                                                    <span class="lastpost-label-inline">Last post<!--:--></span>
+                                                                    <!--<a href="./viewtopic.php?f=9&amp;p=44&amp;sid=9c55c93f78af46abb7827a977d0edc3c#p44" title="jak zwiekszyc testosteron" class="lastsubject-inline">jak zwiekszyc testosteron</a>-->
+                                                                    by <span class="username">RobertBam</span>,
+                                                                    <a href="http://uidevi.com/bulletin/viewtopic.php?f=9&amp;p=44&amp;sid=9c55c93f78af46abb7827a977d0edc3c#p44"><span class="timestamp" title="Thu Oct 19, 2017 5:50 am">Yesterday, 5:50 am</span></a>
+                                                                </span>
+
+                                                                <div class="item-stats--inline">
+                                                                    <span class="item-stat item-stat--topics">
+                                                                        <span class="item-stat__count formatted-numcounter">4</span>
+                                                                        <span class="item-stat__label">Topics</span>
+                                                                    </span>
+                                                                    <span class="item-stat item-stat--posts">
+                                                                        <span class="item-stat__count formatted-numcounter">5</span>
+                                                                        <span class="item-stat__label">Posts</span>
+                                                                    </span>
+                                                                </div>
+
+
+
+                                                            </div>
+
+                                                            <a class="item-col-feed" title="Feed - Lorem ipsum dolor" href="http://uidevi.com/bulletin/app.php/feed?sid=9c55c93f78af46abb7827a977d0edc3c?f=9"><i class="fi fi-rss"></i></a>
+
+                                                            <div class="item-col-stats">
+                                                                <span class="item-stat item-stat--topics">
+                                                                    <span class="item-stat__count formatted-numcounter">4</span>
+                                                                    <span class="item-stat__label">Topics</span>
+                                                                </span>
+                                                                <span class="item-stat item-stat--posts">
+                                                                    <span class="item-stat__count formatted-numcounter">5</span>
+                                                                    <span class="item-stat__label">Posts</span>
+                                                                </span>
+                                                            </div>
+
+                                                            <div class="item-col-lastpost">
+
+                                                                <a href="http://uidevi.com/bulletin/viewtopic.php?f=9&amp;p=44&amp;sid=9c55c93f78af46abb7827a977d0edc3c#p44" title="jak zwiekszyc testosteron" class="item-lastpost__title">jak zwiekszyc testosteron</a>
+
+                                                                <div class="item-lastpost__info">
+                                                                    by <span class="username">RobertBam</span>
+                                                                    <span class="item-lastpost__time timestamp" title="Thu Oct 19, 2017 5:50 am">Yesterday, 5:50 am</span>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </li>
+
+
+                                                </ol>
+                                            </div><!-- category-inner END -->
+                                        </div><!-- category-wrapper END -->
+
+                                        <div class="category-wrapper">
+                                            <div class="category-header" style="">
+                                                <a class="category-title" href="http://uidevi.com/bulletin/viewforum.php?f=10&amp;sid=9c55c93f78af46abb7827a977d0edc3c">Top magazines</a>			<a href="javascript:void(0)" class="close" data-toggle="collapse" data-target="#forum-10" aria-expanded="true" aria-controls="forum-10"></a>
+                                            </div>
+
+                                            <div class="category-inner collapse in" id="forum-10">
+                                                <ol class="itemlist itemlist--forums itemlist--forums--full">
+
+
+
+
+
+                                                    <li class="itemlist__item forum_read ">
+                                                        <div class="item-inner">
+
+                                                            <div class="item-col-icon" title="No unread posts">
+                                                                <i class="fi item-icon"></i>
+
+                                                            </div>
+
+                                                            <div class="item-col-main">
+
+                                                                <a class="item-title" href="http://uidevi.com/bulletin/viewforum.php?f=11&amp;sid=9c55c93f78af46abb7827a977d0edc3c">Contrary to popular</a>
+
+
+                                                                <span class="item-info">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</span>
+
+
+                                                                <span class="item-lastpost--inline">
+                                                                    <span class="lastpost-label-inline">Last post<!--:--></span>
+                                                                    <!--<a href="./viewtopic.php?f=11&amp;p=35&amp;sid=9c55c93f78af46abb7827a977d0edc3c#p35" title="Re: Is it a font or a typeface?" class="lastsubject-inline">Re: Is it a font or a typefac…</a>-->
+                                                                    by <span class="username">manu</span>,
+                                                                    <a href="http://uidevi.com/bulletin/viewtopic.php?f=11&amp;p=35&amp;sid=9c55c93f78af46abb7827a977d0edc3c#p35"><span class="timestamp" title="Sat Sep 09, 2017 11:22 pm">one month ago</span></a>
+                                                                </span>
+
+                                                                <div class="item-stats--inline">
+                                                                    <span class="item-stat item-stat--topics">
+                                                                        <span class="item-stat__count formatted-numcounter">3</span>
+                                                                        <span class="item-stat__label">Topics</span>
+                                                                    </span>
+                                                                    <span class="item-stat item-stat--posts">
+                                                                        <span class="item-stat__count formatted-numcounter">5</span>
+                                                                        <span class="item-stat__label">Posts</span>
+                                                                    </span>
+                                                                </div>
+
+
+
+                                                            </div>
+
+                                                            <a class="item-col-feed" title="Feed - Contrary to popular" href="http://uidevi.com/bulletin/app.php/feed?sid=9c55c93f78af46abb7827a977d0edc3c?f=11"><i class="fi fi-rss"></i></a>
+
+                                                            <div class="item-col-stats">
+                                                                <span class="item-stat item-stat--topics">
+                                                                    <span class="item-stat__count formatted-numcounter">3</span>
+                                                                    <span class="item-stat__label">Topics</span>
+                                                                </span>
+                                                                <span class="item-stat item-stat--posts">
+                                                                    <span class="item-stat__count formatted-numcounter">5</span>
+                                                                    <span class="item-stat__label">Posts</span>
+                                                                </span>
+                                                            </div>
+
+                                                            <div class="item-col-lastpost">
+
+                                                                <a href="http://uidevi.com/bulletin/viewtopic.php?f=11&amp;p=35&amp;sid=9c55c93f78af46abb7827a977d0edc3c#p35" title="Re: Is it a font or a typeface?" class="item-lastpost__title">Re: Is it a font or a typefac…</a>
+
+                                                                <div class="item-lastpost__info">
+                                                                    by <span class="username">manu</span>
+                                                                    <span class="item-lastpost__time timestamp" title="Sat Sep 09, 2017 11:22 pm">one month ago</span>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </li>
+
+                                                </ol>
+                                            </div><!-- category-inner END -->
+                                        </div><!-- category-wrapper END -->
+
+
+                                    </div>
+                                    <div class="col-sidebar">
+                                        <!-- QuickSearch -->
+                                        <div class="sidebar-widget">
+                                            <div id="search-box" class="quicksearch">
+                                                <form action="http://uidevi.com/bulletin/search.php?sid=9c55c93f78af46abb7827a977d0edc3c" method="get" id="search">
+                                                    <fieldset>
+                                                        <div class="quicksearch__placeholder">Search…</div>
+                                                        <input name="keywords" id="keywords" type="search" maxlength="128" title="Search for keywords" class="form-control" size="20" value="">
+                                                        <button class="btn btn-default quicksearch-go hidden" type="submit" title="Search">Search</button>
+                                                        <a href="http://uidevi.com/bulletin/search.php?sid=9c55c93f78af46abb7827a977d0edc3c" class="btn btn-link quicksearch-advanced hidden" title="Advanced search"><i class="glyphicon glyphicon-cog"></i></a>
+                                                        <input type="hidden" name="sid" value="9c55c93f78af46abb7827a977d0edc3c">
+                                                    </fieldset>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <!-- OneAll widget: only shows when enabled from bulletinpanel -->
+                                        <!-- Who is online -->
+                                        <div class="sidebar-widget online-list">
+                                            <div class="widget-header">
+                                                <i class="widget-icon fi fi-earth"></i>
+                                                Who is online	  <span class="online-list-total" title="In total there is 1 user online :: 0 registered, 0 hidden and 1 guest" style="display: inline-block;"><span class="formatted-numcounter">1</span></span>
+                                            </div>
+                                            <div class="widget-content collapse in" id="widget-onlineList">
+                                                Registered users: No registered users
+                                                <em class="wol-explain">based on users active over the past 5 minutes</em>
+                                                <div class="rank-legend" style="display: block;"><a href="http://uidevi.com/bulletin/memberlist.php?mode=group&amp;g=5&amp;sid=9c55c93f78af46abb7827a977d0edc3c"><em style="background-color:rgb(170, 0, 0)"></em><span>Administrators</span></a><a href="http://uidevi.com/bulletin/memberlist.php?mode=group&amp;g=4&amp;sid=9c55c93f78af46abb7827a977d0edc3c"><em style="background-color:rgb(0, 170, 0)"></em><span>Global moderators</span></a></div>
+                                                <!--<div class="block-section">
+                                                  Most users ever online was <strong>23</strong> on Thu Jul 06, 2017 11:47 am
+                                                </div>-->
+                                            </div>
+                                        </div>
+                                        <!-- Statistics (shows only on index) -->
+                                        <div class="sidebar-widget statistics">
+                                            <div class="widget-header">
+                                                <i class="widget-icon fi fi-chart-bar"></i>
+                                                Statistics
+                                            </div>
+                                            <div class="widget-content collapse in" id="widget-statistics">
+                                                <p><i class="fa fa-comment"></i>Total topics <strong>25</strong></p>		<p><i class="fa fa-comments"></i>Total posts <strong>43</strong></p>		<p><i class="fa fa-users"></i>Total members <strong>31</strong></p>		<p><i class="fa fa-user"></i>Our newest member <strong><a href="http://uidevi.com/bulletin/memberlist.php?mode=viewprofile&amp;u=77&amp;sid=9c55c93f78af46abb7827a977d0edc3c" class="username">RobertBam</a></strong></p>
+                                            </div>
+                                        </div>
+                                        <!-- Birthdays -->
+                                        <!-- Forum permissions (shows only on forum) -->
+                                        <!-- Who is Online -->
+                                        <!-- Advertisement Banners -->
+                                        <div class="sidebar-widget-bare" align="center">
+                                            <a href="" class="ad" style="background:#fff001;"><img src="~/images/240x400-2.jpg" alt="" class="img-responsive" style="width:100%;"></a>
+                                            <div class="ad--2 clearfix">
+                                                <a href="" class="ad">
+                                                    <img src="~/images/empty-ad-125x125.jpg" alt="" class="img-responsive">
+                                                </a>
+                                                <a href="" class="ad">
+                                                    <img src="~/images/empty-ad-125x125.jpg" alt="" class="img-responsive">
+                                                </a>
+                                            </div>
+                                            <div class="ad--2 clearfix">
+                                                <a href="" class="ad">
+                                                    <img src="~/images/empty-ad-125x125.jpg" alt="" class="img-responsive">
+                                                </a>
+                                                <a href="" class="ad">
+                                                    <img src="~/images/empty-ad-125x125.jpg" alt="" class="img-responsive">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Who is online -->
+                                <!-- Statistics (shows only on index) -->
+                                <!-- Birthdays -->
+
+
+                            </div><!-- .container END -->
+                            <div class="container">
+
+                                <div class="breadcrumbs-bar breadcrumbs-bar--bottom ">
+
+                                    <ol class="nav-breadcrumbs">
+
+
+
+
+
+                                        <li class="crumb crumb--home crumb--previous" itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="">
+                                            <a href="http://uidevi.com/bulletin/index.php?sid=9c55c93f78af46abb7827a977d0edc3c" itemprop="url" accesskey="h" data-navbar-reference="index" title="Board index"><span itemprop="title">Board index</span></a>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <!-- #page-body END -->
+
+                            
+
+                                        
+
+                                
+                        </div>
+                    </div><!-- #wrap END -->
+                </div><!-- .bulletin-on-content END -->
+            </div><!-- .bulletin-main-wrapper END -->
+            
+            <div class="hidden">
+                <a id="bottom" class="anchor" accesskey="z"></a>
+            </div>
+            <div id="darkenwrapper" data-ajax-error-title="AJAX error" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply.">
+                <div id="darken">&nbsp;</div>
+            </div>
+            <div id="phpbb_alert" class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out.">
+                <a href="http://uidevi.com/bulletin/index.php?sid=9c55c93f78af46abb7827a977d0edc3c#" class="alert_close"></a>
+                <h3 class="alert_title">&nbsp;</h3><p class="alert_text"></p>
+            </div>
+            <div id="phpbb_confirm" class="phpbb_alert">
+                <a href="javascript:void(0)" class="alert_close close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></a>
+                <div class="alert_text"></div>
+            </div>
+        </div>
+      

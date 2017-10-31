@@ -1,0 +1,114 @@
+// Variables
+// =========
+
+// Colors
+@colorPrimary: #2196F3;
+@colorHeader: #2e2e2e; 
+@colorBg: #2e2e2e;
+@bradius: 5px;
+// Metrics
+@boxWidth: 1240px;
+
+// Other
+@layoutType: "wide";
+@borderType: "square";
+
+@outerBgType: "color";
+@outerBgColor: @colorHeader;
+@outerBgImage: "";
+
+@preloader: "";
+
+// Mixins
+.animation(@animation) {
+  -webkit-animation: @animation;
+          animation: @animation;
+}
+.transform(@transform) {
+  -webkit-transform: @transform;
+      -ms-transform: @transform; // IE9 only
+          transform: @transform;
+}
+
+
+// Styles
+// ======
+
+// Backgrounds
+.navbar-wrapper {
+	background: @colorHeader !important;	
+}
+body when (@layoutType = "boxed") and (@outerBgType = "color") {
+	background: @outerBgColor !important;
+}
+body when (@layoutType = "boxed") and (@outerBgType = "pattern") and not (@outerBgImage = "") {
+	background: url(@outerBgImage) @colorBg repeat left top !important;
+}
+html when (@layoutType = "boxed") and (@outerBgType = "image") and not (@outerBgImage = "") {
+	height: 100%;
+	background: url(@outerBgImage) @colorBg repeat center top / cover fixed !important;
+}
+body when (@layoutType = "boxed") and (@outerBgType = "image") {
+	background: none !important;
+}
+
+// Layout
+.wrapper-boxed when (@layoutType = "boxed") {
+	max-width: @boxWidth;
+}
+
+// Colors 
+.itemlist--forums .item-col-icon .item-icon {
+	color: @colorPrimary !important;
+}
+.category-header {
+	background-color: @colorPrimary;
+}
+.bg-color-secondary {
+	background-color: @colorHeader;
+}
+.bg-color-tertiary {
+	background-color: @colorPrimary;
+}
+.btn.btn-color-primary {
+	background-color: @colorPrimary;
+}
+.category-header, .cp-main h3, .inner>h3, .section-header, .st-section__header, .thead, h3#review{
+	background-color: @colorPrimary;
+}
+ 
+
+// =========== theme styles ====================
+.userprofile-panel{background: @colorPrimary;}
+a  {
+    color: @colorPrimary;
+}
+.notifications-dropdown .dropdown-footer>a:hover{ color: @colorPrimary;}
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+    background: @colorPrimary;
+}
+.btn-success:focus, .btn-success:hover{
+    border: 1px solid @colorPrimary;
+	color: @colorPrimary;
+}
+.btn-default, .button, .button1, .button2, .button3{
+background-color: @colorPrimary;
+}
+.btn-default:focus, .btn-default:hover, .button1:focus, .button1:hover, .button2:focus, .button2:hover, .button3:focus, .button3:hover, .button:focus, .button:hover{
+background-color: @colorHeader;
+}
+.dd-container.open>a, .navigation>li>a:focus, .navigation>li>a:hover, .user-area .guest-view li a:hover{
+	color: @colorPrimary;
+}
+.btn-success{
+	background-color: @colorPrimary;
+}
+// Border roundness
+.btn when (@borderType = "rounded") {
+	border-radius: @bradius;
+}
+
+
+
+
+
