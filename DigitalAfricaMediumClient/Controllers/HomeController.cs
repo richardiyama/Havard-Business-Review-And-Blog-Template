@@ -85,6 +85,28 @@ namespace DigitalAfricaMediumClient.Controllers
             return View();
         }
 
+        public ActionResult MagazineArchive()
+        {
+            ViewBag.Message = "The Magazine page.";
+
+            return View();
+        }
+
+        public ActionResult MagazineTableContent()
+        {
+            ViewBag.Message = "The Magazine Table Content page.";
+
+            return View();
+        }
+
+
+        public ActionResult MyLibrary()
+        {
+            ViewBag.Message = "The Library page.";
+
+            return View();
+        }
+
         public ActionResult MostPopular()
         {
             ViewBag.Message = "Most Popular page.";

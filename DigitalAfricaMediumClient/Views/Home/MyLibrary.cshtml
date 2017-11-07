@@ -1,0 +1,535 @@
+﻿@{
+    Html.RenderPartial("NaijaReviewHeader");
+}
+
+
+@{
+    ViewBag.Title = "MyLibrary";
+    
+}
+
+<div id="" class="component" data-order="3" data-type="webscript" data-moveable="false" data-params="region=myhbr-header">
+    <section class="section backdrop-dark clearfix">
+        <div class="row mb-large2 mt-large4">
+            <div class="large-8 small-centered column">
+                <h1 class="large-hed white medium-text-center">Richard Iyama</h1>
+            </div>
+        </div>
+    </section>
+</div>
+
+<div id="" class="component" data-order="4" data-type="webscript" data-moveable="false" data-params="region=stream;location=myhbr">
+    <stream-section>
+        <section js-stream-section="chooser" class="stream-choosers--dark backdrop-dark">
+            <div class="row collapse">
+                <div class="medium-12 large-7 large-push-2 columns">
+                    <tab-bar>
+                        <a href="#" js-target="tab-opener" class="tab-bar--opener flex-row justify-between phm pvm">
+                            <span js-target="tab-opener-text">My Library</span>
+                            <span class="tab-bar--arrow icon icon-caret-right font-size-xlarge"></span>
+                        </a>
+                        <div js-target="tabs" class="tab-bar--tabs flex-row-medium phm" folderlist-tab-name="library" state-path="/my-library/" state-pop="">
+                            <a href="#" js-target="tab" class="tab-bar--tab flex-col-medium justify-center flex-1 medium-text-center line-height-tight active" data-stream-name="library">My Library</a>
+                            <a href="#" js-target="tab" class="tab-bar--tab flex-col-medium justify-center flex-1 medium-text-center line-height-tight " data-stream-name="topics">Topic Feeds</a>
+                            <a href="#" js-target="tab" class="tab-bar--tab flex-col-medium justify-center flex-1 medium-text-center line-height-tight " data-stream-name="purchases">Purchases</a>
+                            <a href="#" js-target="tab" class="tab-bar--tab flex-col-medium justify-center flex-1 medium-text-center line-height-tight " data-stream-name="activity">Activity</a>
+                            <a href="#" js-target="tab" class="tab-bar--tab flex-col-medium justify-center flex-1 medium-text-center line-height-tight " data-stream-name="settings">Account Settings</a>
+                            <a href="#" js-target="tab" class="tab-bar--tab flex-col-medium justify-center flex-1 medium-text-center line-height-tight " data-stream-name="preferences">Email Preferences</a>
+                        </div>
+                    </tab-bar>
+                </div>
+            </div>
+        </section>
+        <section>
+            <stream-content data-stream-name="library" class="stream-content active">
+
+                <div class="row">
+                    <div class="content-area column">
+                        <div class="row">
+                            <div class="medium-3 columns">
+                                <div class="upcase font-bold hide-for-small mt-large3 mbm">MY LIBRARY</div>
+                                <folder-list style="display: block" data-folders="[]"><div class="folder-list" data-reactid=".0"><a href="#" class="folder-list--opener flex-row justify-between pvm prm pll link--white" data-reactid=".0.0"><span data-reactid=".0.0.0">All Folders</span><span class="icon icon-caret-right font-size-xlarge" data-reactid=".0.0.1"></span></a><div class="folder-list--folders" data-reactid=".0.1"><div class="folder-list--folder prm active" data-reactid=".0.1.0:0"><div class="flex-row justify-between" data-reactid=".0.1.0:0.0"><a href="#" class="folder-list--folder-link flex-1 pvm" data-reactid=".0.1.0:0.0.0"><span data-reactid=".0.1.0:0.0.0.1">All Folders</span></a></div></div><div class="folder-list--folder pvm prm" data-reactid=".0.1.1"><a href="#" class="button--alt-black expand mbn" data-reactid=".0.1.1.0">NEW FOLDER</a></div></div></div></folder-list>
+                            </div>
+                            <div class="medium-9 columns">
+                                <div class="flex-row-medium justify-end mvl hide-small">
+                                    <button js-target="share-list-flyout" class="button--black phl mbn spacing-wide is-hidden">Share this folder</button>
+                                    <button disabled="" js-target="bulk-organize-flyout" class="button--light-gray phl mhs mbn spacing-wide">Move selected</button>
+                                    <button disabled="" js-target="bulk-discard-flyout" class="button--light-gray phl mbn spacing-wide">Discard selected</button>
+                                </div>
+
+                                <div class="font-sans-serif font-size-large text-gray mvl" js-target="folder-description"></div>
+                                <hr class="mvn">
+                                <stream-list class="stream-list ptn reset-content-areas" data-stream-endpoint="user/saves" data-selectable="true" data-ads-enabled="false" data-allow-unlimited="true">
+                                    <ul>
+                                        <li class="stream-entry">
+                                            <div class="row">
+                                                <div class="content-area column">
+                                                    <div class="row">
+                                                        <div class="hbr-checkbox left mrl mln hide-for-small"></div>
+                                                        <div class="small-10 columns mtl text-center">
+                                                            <h3 class="subheader darker-gray">Hi, <strong>Richard Iyama</strong>. Welcome to your personal HBR Library.</h3>
+                                                            <h5 class="subheader darker-gray mtm mbl line-height-normal">Consider this your own personal space for collecting, organizing, and sharing your favorite content from Harvard Business Review. Use the folder icon <small class="icon icon-file-text-o primary-color"></small> on any piece of content to add it to your library.</h5>
+                                                            <a href="/" class="button--black">Go to Home Page</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </stream-list>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </stream-content>
+            <stream-content data-stream-name="activity" class="stream-content">
+
+                <div class="row">
+                    <div class="content-area column">
+                        <div class="row">
+                            <div class="medium-3 columns">
+                                <div class="upcase font-bold hide-for-small mt-large3 mbm">ACTIVITY</div>
+                                <tab-bar class="folder-list">
+                                    <a href="#" js-target="tab-opener" class="folder-list--opener flex-row justify-between pvm prm pll link--white">
+                                        <span js-target="tab-opener-text">All Activity</span>
+                                        <span class="icon icon-caret-right font-size-xlarge"></span>
+                                    </a>
+                                    <div js-target="tabs" class="folder-list--folders" folderlist-tab-name="library" state-path="/my-library/" state-pop="">
+                                        <div class="folder-list--folder active" js-target="tab" data-stream-endpoint="user/history">
+                                            <a href="#" class="is-block folder-list--folder-link prm pvm">All Activity</a>
+                                        </div>
+                                        <div class="folder-list--folder " js-target="tab" data-stream-endpoint="user/history/read">
+                                            <a href="#" class="is-block folder-list--folder-link prm pvm">Reading History</a>
+                                        </div>
+                                        <div class="folder-list--folder " js-target="tab" data-stream-endpoint="user/history/shared">
+                                            <a href="#" class="is-block folder-list--folder-link prm pvm">Sharing History</a>
+                                        </div>
+                                    </div>
+                                </tab-bar>
+                            </div>
+                            <div class="medium-9 columns mt-large2">
+                                <stream-list class="stream-list ptn reset-content-areas" data-stream-endpoint="user/history" data-ads-enabled="false" data-allow-unlimited="true">
+                                    <section>
+                                        <div class="row">
+                                            <div class="content-area column">
+                                                <div class="row">
+                                                    <div class="small-12 columns">
+                                                        <div class="row">
+                                                            <div class="small-10 small-offset-1 columns mtl mbm text-center">
+                                                                <h3 class="subheader darker-gray mtn">Welcome to Your Activity Feed</h3>
+                                                                <h5 class="subheader darker-gray mtm mbl line-height-normal">Here you can find all the things that you've read and shared while signed in to your account. To get started, visit our homepage to see what our editors are focused on today, or check out content on one of our 150+ topics.</h5>
+
+                                                                <div class="mvl">
+                                                                    <a href="/" class="button--black mrm">VISIT HOME PAGE</a>
+                                                                    <a href="/topics" class="button--light-gray mrm">SEE OUR TOPICS</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </stream-list>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </stream-content>
+            <stream-content data-stream-name="topics" class="stream-content">
+                <div class="row">
+                    <div class="content-area column">
+                        <div class="row">
+                            <div class="medium-3 columns">
+                                <div class="upcase font-bold hide-for-small mt-large3 mbm">TOPIC FEEDS</div>
+                                <topic-menu style="display: block"><div class="folder-list" data-reactid=".1"><a href="#" class="folder-list--opener flex-row justify-between pvm prm pll link--white" data-reactid=".1.0"><span data-reactid=".1.0.0">Everything</span><span class="icon icon-caret-right font-size-xlarge" data-reactid=".1.0.1"></span></a><div class="folder-list--folders" data-reactid=".1.1"><div class="folder-list--folder prm active" data-reactid=".1.1.0:0"><div class="flex-row" data-reactid=".1.1.0:0.0"><a href="#" class="folder-list--folder-link flex-1 pvm" data-reactid=".1.1.0:0.0.0">Everything</a><span data-reactid=".1.1.0:0.0.1"></span></div></div><div class="folder-list--folder pvm prm" data-reactid=".1.1.1"><a href="/topics" class="mbn button--black expand" data-reactid=".1.1.1.0">FIND MORE</a></div></div></div></topic-menu>
+                            </div>
+                            <div class="medium-9 columns">
+                                <stream-list class="stream-list reset-content-areas mt-large3" data-stream-endpoint="components/myhbr/following" data-selectable="false" data-ads-enabled="false" data-allow-unlimited="true" data-page-number="0">
+                                    <ul></ul>
+                                </stream-list>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </stream-content>
+            <stream-content data-stream-name="purchases" class="stream-content">
+                <stream-list class="stream-list" data-stream-endpoint="user/history/ordered" data-ads-enabled="false" data-allow-unlimited="true" data-page-number="0">     <ul>      <li class="text-center far-island">       <div class="loading mrl is-inline-block">        <div class="pie rotation"></div>        <div class="pie filler"></div>        <div class="mask"></div>       </div>       <span class="is-inline-block mtm lighter-gray font-light font-size-xlarge">Loading...</span>      </li>     </ul>    </stream-list>
+            </stream-content>
+            <stream-content data-stream-name="settings" class="stream-content">
+                <!-- column -->
+                <div id="main" class="container">
+                    <div id="" class="component" data-order="0" data-type="webscript" data-moveable="false" data-params="region=myhbr-account-settings">
+                        <section>
+                            <div class="row mt-large3">
+                                <div class="content-area column">
+                                    <div class="row">
+                                        <div class="small-12 columns">
+                                            <div class="row backdrop-alert-color is-hidden mbl" js-target="profile-error">
+                                                <h4 class="section-label mam" style="color:white">
+                                                    We're Sorry, We were unable to update your account
+                                                    information at this time.
+                                                </h4>
+                                            </div>
+                                            <div class="row backdrop-ordered is-hidden mbl" js-target="profile-success">
+                                                <h4 class="section-label mam" style="color:white">Account Information Saved.</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="small-12 columns">
+                                            <h4 class="section-label text-left mbl">Account Information</h4>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="small-12 medium-6 columns">
+                                            <div class="row">
+                                                <div class="small-12 large-4 columns">
+                                                    <label for="name" class="uppercase">Your name</label>
+                                                </div>
+                                                <div class="small-12 large-8 columns">
+                                                    <input id="name" type="text" js-target="profile-displayname" value="Richard Iyama">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="small-12 large-4 columns">
+                                                    <label for="emailaddress" class="uppercase">Email address</label>
+                                                </div>
+                                                <div class="small-12 large-8 columns">
+                                                    <input id="emailaddress" type="email" js-target="profile-email" value="richardiyama@yahoo.com">
+                                                    <div class="text-gray-light">
+                                                        All emails from hbr.org will be sent to this address. Your email address is
+                                                        not made public and will only be used if you wish to receive a new password or wish to receive certain
+                                                        notifications by email.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mvl"><a href="#" class="alt-action " js-target="change-password-flyout">CHANGE PASSWORD</a></div>
+                                        </div>
+                                        <div class="small-12 medium-6 large-5 columns">
+                                            <div class="row">
+                                                <div class="small-12 large-4 columns">
+                                                    <label for="job-title" class="uppercase">Job title</label>
+                                                </div>
+                                                <div class="small-12 large-8 columns">
+                                                    <select id="job-title" name="job-title" js-target="profile-attribute">
+                                                        <option value=""></option>
+                                                        <option>Administrative</option>
+                                                        <option>Analyst</option>
+                                                        <option>Consultant</option>
+                                                        <option>Executive/C-Level</option>
+                                                        <option>Manager/Senior Manager</option>
+                                                        <option>Other</option>
+                                                        <option>Owner/Partner</option>
+                                                        <option>Retired</option>
+                                                        <option>Sales/Account Management</option>
+                                                        <option>Student/Researcher</option>
+                                                        <option>Teacher/Lecturer</option>
+                                                        <option>Technical Specialist</option>
+                                                        <option>Vice President/Director/General Manager</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="small-12 large-4 columns">
+                                                    <label for="job-title" class="uppercase">Company size</label>
+                                                </div>
+                                                <div class="small-12 large-8 columns">
+                                                    <select id="job-title" name="company-size" js-target="profile-attribute">
+                                                        <option value=""></option>
+                                                        <option>Self-Employed</option>
+                                                        <option>1 to 4</option>
+                                                        <option>5 to 99</option>
+                                                        <option>100 to 499</option>
+                                                        <option>500 to 999</option>
+                                                        <option>1000 to 4999</option>
+                                                        <option>5000 to 9999</option>
+                                                        <option>10000+</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="small-12 large-4 columns">
+                                                    <label for="job-title" class="uppercase">Industry</label>
+                                                </div>
+                                                <div class="small-12 large-8 columns">
+                                                    <select id="job-title" name="industry" js-target="profile-attribute">
+                                                        <option value=""></option>
+                                                        <option>Advertising/Marketing/Public Relations</option>
+                                                        <option>Agriculture</option>
+                                                        <option>Automotive</option>
+                                                        <option>Consultant</option>
+                                                        <option>Education</option>
+                                                        <option>Energy/Natural Resources</option>
+                                                        <option>Engineering/Construction</option>
+                                                        <option>Environmental</option>
+                                                        <option>Financial Services</option>
+                                                        <option>Food &amp; Beverage</option>
+                                                        <option>Government</option>
+                                                        <option>Healthcare</option>
+                                                        <option>Human Resources</option>
+                                                        <option>IT/Technology</option>
+                                                        <option>Life Sciences/Pharmaceuticals</option>
+                                                        <option>Manufacturing &amp; Materials</option>
+                                                        <option>Media</option>
+                                                        <option>Other</option>
+                                                        <option>Professional Services</option>
+                                                        <option>Real Estate</option>
+                                                        <option>Retail/Consumer Goods</option>
+                                                        <option>Telecommunications</option>
+                                                        <option>Transportation</option>
+                                                        <option>Travel/Entertainment</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="text-gray-light large-8 large-push-4 columns mbl">
+                                                    Tell us a bit more about yourself to help us
+                                                    personalize the content you see on hbr.org. This information is not made public.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="button mbn expand-when-small" js-target="save-profile">SAVE CHANGES</button>
+                                </div>
+                            </div>
+                        </section>
+                        <hr>
+
+
+                        <section>
+                            <div class="row">
+                                <div class="content-area column">
+
+                                    <div class="row">
+                                        <div class="small-12 columns">
+                                            <h4 class="section-label mtl text-left">Linked Social Accounts</h4>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="flex-row justify-center">
+                                        <div class="flex-row">
+                                            <div class="mhm">
+                                                <i class="icon icon-2x icon-linkedin text-gray"></i>
+                                                <social-provider class="follow-topic is-inline-block vertical-align-top" data-name="linkedin">
+                                                    <div class="follow-this">
+                                                        <a href="#" js-target="enable-this"><i class="icon icon-follow-this"></i></a>
+                                                    </div>
+                                                    <div class="unfollow-this"><a href="#" js-target="disable-this"><i class="icon icon-unfollow-this"></i></a></div>
+                                                </social-provider>
+                                            </div>
+                                            <div class="mhm">
+                                                <i class="icon icon-2x icon-facebook text-gray"></i>
+                                                <social-provider class="follow-topic is-inline-block vertical-align-top" data-name="facebook">
+                                                    <div class="follow-this">
+                                                        <a href="#" js-target="enable-this"><i class="icon icon-follow-this"></i></a>
+                                                    </div>
+                                                    <div class="unfollow-this"><a href="#" js-target="disable-this"><i class="icon icon-unfollow-this"></i></a></div>
+                                                </social-provider>
+                                            </div>
+                                            <div class="mhm">
+                                                <i class="icon icon-2x icon-twitter text-gray"></i>
+                                                <social-provider class="follow-topic is-inline-block vertical-align-top" data-name="twitter">
+                                                    <div class="follow-this">
+                                                        <a href="#" js-target="enable-this"><i class="icon icon-follow-this"></i></a>
+                                                    </div>
+                                                    <div class="unfollow-this"><a href="#" js-target="disable-this"><i class="icon icon-unfollow-this"></i></a></div>
+                                                </social-provider>
+                                            </div>
+                                            <div class="mhm">
+                                                <i class="icon icon-2x icon-google-plus text-gray"></i>
+                                                <social-provider class="follow-topic is-inline-block vertical-align-top" data-name="googleplus">
+                                                    <div class="follow-this">
+                                                        <a href="#" js-target="enable-this"><i class="icon icon-follow-this"></i></a>
+                                                    </div>
+                                                    <div class="unfollow-this"><a href="#" js-target="disable-this"><i class="icon icon-unfollow-this"></i></a></div>
+                                                </social-provider>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <hr id="subscription-details">
+                        <div class="row">
+                            <div class="content-area column">
+                                <h4 class="section-label mtl mbl text-left">Subscription Details</h4>
+                                <div>
+                                    We can't find an active subscription connected to your email address. If you are a <em>
+                                        Harvard Business
+                                        Review
+                                    </em> subscriber, please activate your subscription using the button below.
+                                </div>
+                                <div class="mvl row">
+                                    <div class="column medium-6">
+                                        <a href="/subscriber-registration" class="button--light-gray mrm mbs expand">ACTIVATE MY SUBSCRIPTION</a>
+                                    </div>
+                                    <personalization-placement class="personalization-placement column medium-6" data-placement-id="account_setting_engage">
+                                        <a href="http://recs.richrelevance.com/rrserver/click?a=dae139408f447afd&amp;vg=f973d729-af1d-415e-41f6-8657e46097ee&amp;pti=9&amp;pa=account_setting_engage&amp;hpi=10413&amp;rti=2&amp;sgs=&amp;u=BAE99771-1111-4EF5-A3CE-8DBC6B0E7430&amp;mvtId=-1&amp;mvtTs=1509974944576&amp;uguid=debdc24e-fa42-4ddd-d26b-6d5771f5413f&amp;channelId=WEB&amp;userAttribute=RR_SUBSCRIPTION_STATUS%3ADEFC%7Cstate%3Aregistered&amp;s=FC8972690A5CEDD1FB3B6D772E224E78&amp;pg=-1&amp;p=content__53&amp;ct=https%3A%2F%2Fw1.buysub.com%2Fservlet%2FConvertibleGateway%3Fcds_mag_code%3DHVR%26cds_page_id%3D203760%26cds_response_key%3DI74ADEFC%26cm_vc=rr_home_page.account_setting_engage" class="button expand mbs">SUBSCRIBE</a>
+                                    </personalization-placement>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+            </stream-content>
+            <stream-content data-stream-name="preferences" class="stream-content">
+                <section>
+                    <div class="row">
+                        <div class="content-area column">
+
+                            <div class="row">
+                                <div class="small-12 columns">
+                                    <h4 class="section-label mtl text-left">My Newsletters</h4>
+                                </div>
+                            </div>
+
+                            <div class="tile-container">
+                                <div class="flex-row-wrap newsletter-tile-container ">
+                                    <div class="flex-col justify-between has-borders mvm pam backdrop-white ">
+                                        <div>
+                                            <div style="color: #0CAFFC">
+                                                <svg class="size-64x64 svg-fill-current"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/resources/css/images/icons.svg#son"></use></svg>
+                                            </div>
+                                            <h3>The Insider</h3>
+                                            <div class="dek mbm">A weekly, subscriber-only newsletter curated by editors to help you keep tabs on the content that matters most to you.</div>
+                                        </div>
+                                        <follow-subscribe class="follow-topic follow-topic-subscriber" data-name="The Insider" data-activity="newsletter">
+                                            <div class="is-inline-block" data-help-box-target="insider-enl">
+                                                <div class="follow-this"><a href="#" js-target="enable-this" data-method="subscribe"><i class="icon icon-follow-this"></i> <strong>Sign up</strong></a></div>
+                                                <div class="unfollow-this"><a href="#" js-target="disable-this" data-method="unsubscribe"><i class="icon icon-unfollow-this"></i> <strong>Signed up</strong></a></div>
+                                                <div class="login-this"><a href="/sign-in" js-target="sign-in-this"><i class="icon icon-follow-this"></i> <strong>Sign in to Sign up</strong></a></div>
+                                                <div class="subscribe-this"><a href="/subscribe"><i class="icon icon-follow-this"></i> <strong>Subscribe to Sign up</strong></a></div>
+                                            </div>
+                                        </follow-subscribe>
+                                    </div>
+                                    <div class="flex-col justify-between has-borders mvm pam backdrop-white ">
+                                        <div>
+                                            <div style="color: #FB6405">
+                                                <svg class="size-64x64 svg-fill-current"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/resources/css/images/icons.svg#gears"></use></svg>
+                                            </div>
+                                            <h3>Management Tip of the Day</h3>
+                                            <div class="dek mbm">Quick, practical management advice to help you do your job better, delivered weekdays.</div>
+                                        </div>
+                                        <follow-subscribe class="follow-topic " data-name="Management Tip of the Day" data-activity="newsletter">
+                                            <div class="follow-this"><a href="#" js-target="enable-this" data-method="subscribe"><i class="icon icon-follow-this"></i> <strong>Sign up</strong></a></div>
+                                            <div class="unfollow-this"><a href="#" js-target="disable-this" data-method="unsubscribe"><i class="icon icon-unfollow-this"></i> <strong>Signed up</strong></a></div>
+                                        </follow-subscribe>
+                                    </div>
+                                    <div class="flex-col justify-between has-borders mvm pam backdrop-white ">
+                                        <div>
+                                            <div style="color: #F00000">
+                                                <svg class="size-64x64 svg-fill-current"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/resources/css/images/icons.svg#flaming-notebook"></use></svg>
+                                            </div>
+                                            <h3>Weekly Hotlist</h3>
+                                            <div class="dek mbm">A roundup of Harvard Business Review's most popular ideas and advice, delivered weekly.</div>
+                                        </div>
+                                        <follow-subscribe class="follow-topic " data-name="Weekly Hotlist" data-activity="newsletter">
+                                            <div class="follow-this"><a href="#" js-target="enable-this" data-method="subscribe"><i class="icon icon-follow-this"></i> <strong>Sign up</strong></a></div>
+                                            <div class="unfollow-this"><a href="#" js-target="disable-this" data-method="unsubscribe"><i class="icon icon-unfollow-this"></i> <strong>Signed up</strong></a></div>
+                                        </follow-subscribe>
+                                    </div>
+                                    <div class="flex-col justify-between has-borders mvm pam backdrop-white ">
+                                        <div>
+                                            <div style="color: #03C1ED">
+                                                <svg class="size-64x64 svg-fill-current"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/resources/css/images/icons.svg#alarm-clock"></use></svg>
+                                            </div>
+                                            <h3>The Daily Alert</h3>
+                                            <div class="dek mbm">Links to all the digital articles published in the last 24 hours.</div>
+                                        </div>
+                                        <follow-subscribe class="follow-topic " data-name="The Daily Alert" data-activity="newsletter">
+                                            <div class="follow-this"><a href="#" js-target="enable-this" data-method="subscribe"><i class="icon icon-follow-this"></i> <strong>Sign up</strong></a></div>
+                                            <div class="unfollow-this"><a href="#" js-target="disable-this" data-method="unsubscribe"><i class="icon icon-unfollow-this"></i> <strong>Signed up</strong></a></div>
+                                        </follow-subscribe>
+                                    </div>
+                                    <div class="flex-col justify-between has-borders mvm pam backdrop-white ">
+                                        <div>
+                                            <div style="color: #0284FD">
+                                                <svg class="size-64x64 svg-fill-current"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/resources/css/images/icons.svg#fish"></use></svg>
+                                            </div>
+                                            <h3>Leadership</h3>
+                                            <div class="dek mbm">Must-reads from our most recent articles on leadership and managing people, delivered once a month.</div>
+                                        </div>
+                                        <follow-subscribe class="follow-topic " data-name="Leadership" data-activity="newsletter">
+                                            <div class="follow-this"><a href="#" js-target="enable-this" data-method="subscribe"><i class="icon icon-follow-this"></i> <strong>Sign up</strong></a></div>
+                                            <div class="unfollow-this"><a href="#" js-target="disable-this" data-method="unsubscribe"><i class="icon icon-unfollow-this"></i> <strong>Signed up</strong></a></div>
+                                        </follow-subscribe>
+                                    </div>
+                                    <div class="flex-col justify-between has-borders mvm pam backdrop-white ">
+                                        <div>
+                                            <div style="color: #B20303">
+                                                <svg class="size-64x64 svg-fill-current"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/resources/css/images/icons.svg#magazine"></use></svg>
+                                            </div>
+                                            <h3>Best of the Issue</h3>
+                                            <div class="dek mbm">The editor of Harvard Business Review picks highlights from each new issue of the magazine.</div>
+                                        </div>
+                                        <follow-subscribe class="follow-topic " data-name="Best of the Issue" data-activity="newsletter">
+                                            <div class="follow-this"><a href="#" js-target="enable-this" data-method="subscribe"><i class="icon icon-follow-this"></i> <strong>Sign up</strong></a></div>
+                                            <div class="unfollow-this"><a href="#" js-target="disable-this" data-method="unsubscribe"><i class="icon icon-unfollow-this"></i> <strong>Signed up</strong></a></div>
+                                        </follow-subscribe>
+                                    </div>
+                                    <div class="flex-col justify-between has-borders mvm pam backdrop-white ">
+                                        <div>
+                                            <div style="color: #872EBF">
+                                                <svg class="size-64x64 svg-fill-current"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/resources/css/images/icons.svg#rocket"></use></svg>
+                                            </div>
+                                            <h3>Technology &amp; Innovation</h3>
+                                            <div class="dek mbm">Must-reads from our most recent articles on technology and innovation, delivered once a month.</div>
+                                        </div>
+                                        <follow-subscribe class="follow-topic " data-name="Technology &amp; Innovation" data-activity="newsletter">
+                                            <div class="follow-this"><a href="#" js-target="enable-this" data-method="subscribe"><i class="icon icon-follow-this"></i> <strong>Sign up</strong></a></div>
+                                            <div class="unfollow-this"><a href="#" js-target="disable-this" data-method="unsubscribe"><i class="icon icon-unfollow-this"></i> <strong>Signed up</strong></a></div>
+                                        </follow-subscribe>
+                                    </div>
+                                    <div class="flex-col justify-between has-borders mvm pam backdrop-white ">
+                                        <div>
+                                            <div style="color: #014A07">
+                                                <svg class="size-64x64 svg-fill-current"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/resources/css/images/icons.svg#knot"></use></svg>
+                                            </div>
+                                            <h3>Strategy &amp; Execution</h3>
+                                            <div class="dek mbm">Must-reads from our most recent articles on strategy and execution, delivered once a month.</div>
+                                        </div>
+                                        <follow-subscribe class="follow-topic " data-name="Strategy &amp; Execution" data-activity="newsletter">
+                                            <div class="follow-this"><a href="#" js-target="enable-this" data-method="subscribe"><i class="icon icon-follow-this"></i> <strong>Sign up</strong></a></div>
+                                            <div class="unfollow-this"><a href="#" js-target="disable-this" data-method="unsubscribe"><i class="icon icon-unfollow-this"></i> <strong>Signed up</strong></a></div>
+                                        </follow-subscribe>
+                                    </div>
+                                    <div class="flex-col justify-between has-borders mvm pam backdrop-white ">
+                                        <div>
+                                            <div style="color: #FFAA00">
+                                                <svg class="size-64x64 svg-fill-current"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/resources/css/images/icons.svg#purse"></use></svg>
+                                            </div>
+                                            <h3>Finance &amp; Economy</h3>
+                                            <div class="dek mbm">Must-reads from our most recent articles on finance and the economy, delivered once a month.</div>
+                                        </div>
+                                        <follow-subscribe class="follow-topic " data-name="Finance &amp; Economy" data-activity="newsletter">
+                                            <div class="follow-this"><a href="#" js-target="enable-this" data-method="subscribe"><i class="icon icon-follow-this"></i> <strong>Sign up</strong></a></div>
+                                            <div class="unfollow-this"><a href="#" js-target="disable-this" data-method="unsubscribe"><i class="icon icon-unfollow-this"></i> <strong>Signed up</strong></a></div>
+                                        </follow-subscribe>
+                                    </div>
+                                    <div class="flex-col justify-between has-borders mvm pam backdrop-white ">
+                                        <div>
+                                            <div style="color: #01BAB3">
+                                                <svg class="size-64x64 svg-fill-current"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/resources/css/images/icons.svg#book"></use></svg>
+                                            </div>
+                                            <h3>Business Bookshelf</h3>
+                                            <div class="dek mbm">Summaries and excerpts of the latest books, special offers, and more from Harvard Business Review Press.</div>
+                                        </div>
+                                        <follow-subscribe class="follow-topic " data-name="Business Bookshelf" data-activity="newsletter">
+                                            <div class="follow-this"><a href="#" js-target="enable-this" data-method="subscribe"><i class="icon icon-follow-this"></i> <strong>Sign up</strong></a></div>
+                                            <div class="unfollow-this"><a href="#" js-target="disable-this" data-method="unsubscribe"><i class="icon icon-unfollow-this"></i> <strong>Signed up</strong></a></div>
+                                        </follow-subscribe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <hr>
+            </stream-content>
+        </section>
+    </stream-section>
+</div>

@@ -19,11 +19,7 @@ namespace DigitalAfricaMediumClient
                 defaults: new { controller = "Home", action = "Home", id = UrlParameter.Optional }
             );
 
-            routes.MapRoute(
-               name: "Naija Business Review",
-               url: "{controller}/{action}/{id}",
-               defaults: new { controller = "Home", action = "Home", id = UrlParameter.Optional }
-           );
+           
         }
     }
 }
