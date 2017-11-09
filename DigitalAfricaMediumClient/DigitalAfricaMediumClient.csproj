@@ -630,6 +630,21 @@
   <ItemGroup>
     <Content Include="Views\Home\MagazineTableContent.cshtml" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\ParticularTopics.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\LatestSingleTopic.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\SingleTopicFromTheStore.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\PopularTopics.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Subscribe.cshtml" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

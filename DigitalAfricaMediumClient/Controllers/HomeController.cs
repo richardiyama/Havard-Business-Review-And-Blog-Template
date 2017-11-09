@@ -121,6 +121,35 @@ namespace DigitalAfricaMediumClient.Controllers
             return View();
         }
 
+        public ActionResult ParticularTopics()
+        {
+            ViewBag.Message = "Particular Topic";
+
+            return View();
+        }
+
+        public ActionResult LatestSingleTopic()
+        {
+
+            ViewBag.Message = "Latest Single Topic";
+
+            return View();
+        }
+
+        public ActionResult SingleTopicFromTheStore()
+        {
+            ViewBag.Message = "From the Store";
+
+            return View();
+        }
+
+        public ActionResult PopularTopics()
+        {
+
+            ViewBag.Message = "Popular Topics";
+
+            return View();
+        }
         public ActionResult Video()
         {
             ViewBag.Message = "Video page.";
@@ -141,6 +170,13 @@ namespace DigitalAfricaMediumClient.Controllers
 
             return View();
         }
+        public ActionResult Subscribe()
+        {
+            ViewBag.Message = "Subscribe page.";
+
+            return View();
+        }
+
         public ActionResult Dmaconference()
         {
             ViewBag.Message = "Your DMA Conference page.";
