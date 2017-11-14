@@ -58,17 +58,11 @@
                 <div class="navbar-header">
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div id="logo">
-                        <a href="#" target="_self">
-                            <img src="images/logo.png" border="0" usemap="#Map" />
-                            <map name="Map" id="Map">
-                                <area shape="rect" coords="3,64,208,78" href="http://www.gtbank.com" target="_blank" alt="Powered by Guaranty Trust Bank plc" />
-                            </map>
-                        </a>
-                    </div>
+                  
                     <div id="toprule"></div>
                     <div id="navigation">
-                        @Html.ActionLink("Home", "Index", "Home") | @Html.ActionLink("About", "About", "Home") | @Html.ActionLink("Blog", "Blog", "Home") | @Html.ActionLink("Naija business review", "Naijabusinessreview", "Home")|@Html.ActionLink("Future tv", "Futuretv", "Home")|@Html.ActionLink("Sme Community", "Smecommunity", "Home")|@Html.Partial("_LoginPartial")
+                       
+                        @Html.ActionLink("Home", "Index", "Home") | @Html.Partial("_LoginPartial") | @Html.ActionLink("About", "About", "Home") | @Html.ActionLink("Blog", "Blog", "Home") | @Html.ActionLink("Naija business review", "Naijabusinessreview", "Home")|@Html.ActionLink("Future tv", "Futuretv", "Home")| @Html.ActionLink("Sme Community", "Smecommunity", "Home")
 
                     </div>
 

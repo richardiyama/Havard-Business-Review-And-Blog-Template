@@ -1,0 +1,724 @@
+/*!
+ * Start Bootstrap - Blog Home HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+html {
+	font-family: 'National', Helvetica, Arial, sans-serif;
+	background-color:#fff;
+}
+
+body {
+	font-family: 'National', Helvetica, Arial, sans-serif;
+    padding-top: 0px;
+}
+
+/********************************
+TEXT
+*********************************/
+.h1, .h2, .h3, h1, h2, h3 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+h1{
+	font-family: 'National';
+	font-weight: 800;
+	font-style: normal;
+	font-size:58px;
+	color:#fff;
+	text-transform:uppercase;
+	line-height:46px;
+	margin-top: 15px;
+    margin-bottom: 16px;
+}
+h2{
+	font-family: 'National';
+	font-weight: 800;
+	font-style: normal;
+	font-size:37px;
+	color:#249baa;
+	line-height:37px;
+}
+h3{
+	font-family: 'National';
+	font-weight: bold;
+	font-style: normal;
+	font-size:23px;
+	color:#a90533;
+	text-transform:uppercase;
+	line-height:25px;
+}
+h4{
+	font-family: 'National';
+	font-weight: bold;
+	font-style: normal;
+	font-size:26px;
+	color:#a90533;
+	line-height:25px;
+	margin-bottom:30px;
+    text-align: left;	
+}
+p{
+	font-family: 'National Book';
+	font-weight: normal;
+	font-style: normal;
+	font-size:16px;
+	color:#222222;
+	line-height:19px;
+}
+a{
+	color:#239caa;
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	transition:.5s;
+}
+a:hover{
+	color:#a90533;
+	text-decoration:none;
+}	
+
+/********************************
+GENERAL STYLES
+*********************************/
+
+.btn{
+	border-radius:0px;
+	font-size:22px;
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	transition:.5s;	
+}
+.btn-primary{
+	background-color:#a90533;
+	text-transform:uppercase;
+	border:none;
+}
+.btn-primary:hover, .btn-primary:focus{
+	background-color:#249baa;
+}
+.sale-header .row{
+	background-color:#a90533;
+	margin-left: 0px;
+    margin-right: 0px;
+}
+.sale-header img{
+	margin-top: 12px;
+}
+.mag .row{
+	margin-top:20px;
+}
+.num{
+	font-family: 'Chivo', sans-serif;
+	font-size: 52px;
+}
+.subscription-img img{
+	width:100%;
+}
+.subscribe-now-btn{
+    position: absolute;
+    right: 0;
+    top:30px;
+    border-top:1px solid #fff;
+    border-bottom:1px solid #fff;
+    border-left:1px solid #fff;    
+    border-right:transparent;
+    border-radius: 0px;
+    background-color: #d3222a;
+    text-transform: uppercase;
+    font-size: 18px;
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	transition:.5s;
+}
+.subscribe-now-btn:hover, .subscribe-now-btn:focus{
+    background-color: #e6101a;
+    border-color:#fff;
+}
+.subscribe-now-btn .fa{
+    color: #fff;
+    background-color: transparent;
+    padding: 0px;
+    border-radius: 0px;
+}  
+
+/********************************
+SLIDER
+*********************************/
+
+.print-ed{
+    border: 4px solid #f1eee6;
+}
+.allaccess-ed{
+	background-color:#f1eee6;
+}
+
+.print-ed, .allaccess-ed {
+    padding:10px 10px 4px;;	
+    margin-bottom:10px;
+}    
+input.set {
+    display: none;
+}
+.subscription-deet{
+	margin-bottom:60px;
+}
+
+/************************ Slider 1 **************************/
+#slides {
+    margin: 0px auto 50px;
+    width: 100%;
+    position: relative;
+}
+#slides .mask {
+    width: 70%;
+    overflow: hidden;
+    margin: auto;
+}
+#slides .mask img{
+width:100%;
+}
+#slides .overflow {
+    width: 400%;
+    -webkit-transform: translateZ(0);
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+#slides .slide {
+    width: 25%;
+    line-height: 200px;
+    float: left;
+    background: #fff;
+}
+#controls {
+    width: 100%;
+}
+#controls label {
+    display: none;
+    width: 5%;
+    height: 60px;
+    position: absolute;
+    top: 50%;
+    margin-top: -30px;
+    cursor: pointer;
+    background: #000;
+}
+#controls label:hover {
+    opacity: 0.8;
+}
+/** slider 1 **/
+#slide1:checked ~ .mask .overflow {
+    margin-left: 0;
+}
+#slide2:checked ~ .mask .overflow {
+    margin-left: -100%;
+}
+#slide3:checked ~ .mask .overflow {
+    margin-left: -200%;
+}
+#slide4:checked ~ .mask .overflow {
+    margin-left: -300%;
+}
+#slide1:checked ~ #controls label:nth-child(2),
+#slide2:checked ~ #controls label:nth-child(3),
+#slide3:checked ~ #controls label:nth-child(4),
+#slide4:checked ~ #controls label:nth-child(1) {
+    right: 0;
+    display: block;
+    background: url(../img/icon_nav.png) no-repeat;
+	background-position: -50px 0;
+    width: 50px;
+}
+#slide1:checked ~ #controls label:nth-child(4),
+#slide2:checked ~ #controls label:nth-child(1),
+#slide3:checked ~ #controls label:nth-child(2),
+#slide4:checked ~ #controls label:nth-child(3) {
+    left: 0;
+    display: block;
+    background: url(../img/icon_nav.png) no-repeat;
+	background-position: 0 0;
+    width: 50px;    
+}
+/** slider 2 **/
+#slide5:checked ~ .mask .overflow {
+    margin-left: 0;
+}
+#slide6:checked ~ .mask .overflow {
+    margin-left: -100%;
+}
+#slide7:checked ~ .mask .overflow {
+    margin-left: -200%;
+}
+#slide8:checked ~ .mask .overflow {
+    margin-left: -300%;
+}
+
+#slide5:checked ~ #controls label:nth-child(2),
+#slide6:checked ~ #controls label:nth-child(3),
+#slide7:checked ~ #controls label:nth-child(4),
+#slide8:checked ~ #controls label:nth-child(1) {
+    right: 0;
+    display: block;
+    background: url(../img/icon_nav.png) no-repeat;
+	background-position: -50px 0;
+    width: 50px;
+}
+#slide5:checked ~ #controls label:nth-child(4),
+#slide6:checked ~ #controls label:nth-child(1),
+#slide7:checked ~ #controls label:nth-child(2),
+#slide8:checked ~ #controls label:nth-child(3) {
+    left: 0;
+    display: block;
+    background: url(../img/icon_nav.png) no-repeat;
+	background-position: 0 0;
+    width: 50px;    
+}
+/** slider 3 **/
+#slide9:checked ~ .mask .overflow {
+    margin-left: 0;
+}
+#slide10:checked ~ .mask .overflow {
+    margin-left: -100%;
+}
+#slide11:checked ~ .mask .overflow {
+    margin-left: -200%;
+}
+#slide12:checked ~ .mask .overflow {
+    margin-left: -300%;
+}
+
+#slide9:checked ~ #controls label:nth-child(2),
+#slide10:checked ~ #controls label:nth-child(3),
+#slide11:checked ~ #controls label:nth-child(4),
+#slide12:checked ~ #controls label:nth-child(1) {
+    right: 0;
+    display: block;
+    background: url(../img/icon_nav.png) no-repeat;
+	background-position: -50px 0;
+    width: 50px;
+}
+#slide9:checked ~ #controls label:nth-child(4),
+#slide10:checked ~ #controls label:nth-child(1),
+#slide11:checked ~ #controls label:nth-child(2),
+#slide12:checked ~ #controls label:nth-child(3) {
+    left: 0;
+    display: block;
+    background: url(../img/icon_nav.png) no-repeat;
+	background-position: 0 0;
+    width: 50px;    
+}
+/** slider 4 **/
+#slide13:checked ~ .mask .overflow {
+    margin-left: 0;
+}
+#slide14:checked ~ .mask .overflow {
+    margin-left: -100%;
+}
+#slide15:checked ~ .mask .overflow {
+    margin-left: -200%;
+}
+#slide16:checked ~ .mask .overflow {
+    margin-left: -300%;
+}
+
+#slide13:checked ~ #controls label:nth-child(2),
+#slide14:checked ~ #controls label:nth-child(3),
+#slide15:checked ~ #controls label:nth-child(4),
+#slide16:checked ~ #controls label:nth-child(1) {
+    right: 0;
+    display: block;
+    background: url(../img/icon_nav.png) no-repeat;
+	background-position: -50px 0;
+    width: 50px;
+}
+#slide13:checked ~ #controls label:nth-child(4),
+#slide14:checked ~ #controls label:nth-child(1),
+#slide15:checked ~ #controls label:nth-child(2),
+#slide16:checked ~ #controls label:nth-child(3) {
+    left: 0;
+    display: block;
+    background: url(../img/icon_nav.png) no-repeat;
+	background-position: 0 0;
+    width: 50px;    
+}
+/** slider 5 **/
+#slide17:checked ~ .mask .overflow {
+    margin-left: 0;
+}
+#slide18:checked ~ .mask .overflow {
+    margin-left: -100%;
+}
+#slide19:checked ~ .mask .overflow {
+    margin-left: -200%;
+}
+#slide20:checked ~ .mask .overflow {
+    margin-left: -300%;
+}
+
+#slide17:checked ~ #controls label:nth-child(2),
+#slide18:checked ~ #controls label:nth-child(3),
+#slide19:checked ~ #controls label:nth-child(4),
+#slide20:checked ~ #controls label:nth-child(1) {
+    right: 0;
+    display: block;
+    background: url(../img/icon_nav.png) no-repeat;
+	background-position: -50px 0;
+    width: 50px;
+}
+#slide17:checked ~ #controls label:nth-child(4),
+#slide18:checked ~ #controls label:nth-child(1),
+#slide19:checked ~ #controls label:nth-child(2),
+#slide20:checked ~ #controls label:nth-child(3) {
+    left: 0;
+    display: block;
+    background: url(../img/icon_nav.png) no-repeat;
+	background-position: 0 0;
+    width: 50px;    
+}
+/** slider 6 **/
+#slide21:checked ~ .mask .overflow {
+    margin-left: 0;
+}
+#slide22:checked ~ .mask .overflow {
+    margin-left: -100%;
+}
+#slide23:checked ~ .mask .overflow {
+    margin-left: -200%;
+}
+#slide24:checked ~ .mask .overflow {
+    margin-left: -300%;
+}
+
+#slide21:checked ~ #controls label:nth-child(2),
+#slide22:checked ~ #controls label:nth-child(3),
+#slide23:checked ~ #controls label:nth-child(4),
+#slide24:checked ~ #controls label:nth-child(1) {
+    right: 0;
+    display: block;
+    background: url(../img/icon_nav.png) no-repeat;
+	background-position: -50px 0;
+    width: 50px;
+}
+#slide21:checked ~ #controls label:nth-child(4),
+#slide22:checked ~ #controls label:nth-child(1),
+#slide23:checked ~ #controls label:nth-child(2),
+#slide24:checked ~ #controls label:nth-child(3) {
+    left: 0;
+    display: block;
+    background: url(../img/icon_nav.png) no-repeat;
+	background-position: 0 0;
+    width: 50px;    
+}
+/********************************
+FORM
+*********************************/
+.mag .well{
+	padding: 0px 0px 20px;
+}
+#msform p{
+	text-align:left;
+}
+fieldset hr{
+	border-color:#c1beb8;
+}
+.renewal{
+	font-family: 'National Book';
+	font-weight: normal;
+	font-style: normal;
+	font-size:13px;
+	line-height:15px;
+	letter-spacing:1px;
+	color:#666666;
+}
+p.confirmation{
+	margin:0px 20px;
+}
+.pay-time{
+	margin:20px 0px;
+}
+.all-access{
+	letter-spacing: 1px;
+}
+.all-access, .print-online{
+    margin-bottom: 13px;		
+}
+.cards img{
+	margin-top:10px;
+}
+.expiration-date{
+	font-family: 'National Book';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 12px;
+    float: left;
+    margin-right: 3.5%;
+    margin-top: 10px;    
+}
+select::-ms-expand {
+    display: none;
+}
+.styled-select.slate.month{
+	width: 38%;
+    margin-right: 3%;
+}
+.styled-select.slate.year{
+    width: 38%;
+}
+.confirm-bottom{
+	margin-bottom:45px;
+}
+.confirm-top{
+	margin-top:45px;
+}
+.red{
+	color:#a90533;
+}
+
+.blue{
+	color:#239caa;
+}
+.offer-checks{
+	text-align: left;
+    font-size: 13px;
+}
+
+/********************************
+TABS
+*********************************/
+
+.tabordion {
+  	color: #333;
+  	font-family: arial, sans-serif;
+  	position: relative;
+	margin-top: 30px;  
+}
+
+.tabordion input[name="sections"] {
+  	left: -9999px;
+  	position: absolute;
+  	top: -9999px;
+}
+
+.tabordion section {
+  	display: block;
+}
+
+.tabordion section label {
+  	background: #f1eee6;
+  	border:1px solid #fff;
+  	cursor: pointer;
+  	display: block;
+  	font-size: 1.2em;
+  	font-weight: bold;
+  	padding: 10px 15px 5px;;
+  	position: relative;
+  	width: 38%;
+  	z-index:100;
+}
+
+.tabordion section article {
+  	display: none;
+  	min-width: 300px;
+    width: 60%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.tabordion section article:after {
+  	bottom: 0;
+  	content: "";
+  	display: block;
+  	left:-229px;
+  	position: absolute;
+  	top: 0;
+  	width: 220px;
+  	z-index:1;
+}
+
+.tabordion input[name="sections"]:checked + label { 
+  	background: #fff;
+	border: 4px solid #f1eee6;
+}
+
+.tabordion input[name="sections"]:checked ~ article {
+  	display: block;
+}
+
+
+
+
+/********************************
+FOOTER
+*********************************/
+
+footer {
+    margin: 50px 0;
+}
+
+/********************************
+ADDED STYLES
+*********************************/
+
+.Canadatv, .Bermudatv {
+	display:none;
+}
+.links_left {
+	text-align:left;
+	line-height:35px;
+}
+.links_center {
+	text-align:center;
+	line-height:35px;
+}
+.links_right {
+	text-align:right;
+	line-height:35px;
+}
+
+/********************************
+MEDIA QUERIES
+*********************************/
+
+@media screen and (min-width: 1200px) {
+	.swipe img{
+		margin-left: 20%;
+	}
+}
+@media screen and (max-width: 1199px) {
+	h1, .h1{
+		font-size:38px;
+		line-height: 29px;
+		margin-top: 12px;
+	}
+	.num{
+	    font-size: 34px;		
+	}
+}	
+@media only screen and (min-width:992px) and (max-width: 1199px){
+	h1, .h1{
+		text-align:center;
+		margin-top: 25px;
+		margin-bottom:25px;
+	}	
+	.msform .action-button{
+		position: relative;
+		width: 100%;
+	}
+	.msform .action-button.next{
+		margin-left:15px;
+	}
+	.msform .action-button.previous{
+		margin-left:-15px;
+	}
+}
+@media screen and (min-width: 991px) {
+	.subscription-deet{
+		float:left;
+	}
+	.subscription-img{
+		float:right;
+	}	
+	#slides {
+    	margin-top: 72px;
+    }
+}
+@media only screen and (min-width:767px) and (max-width: 1199px){
+	.styled-select.slate.year, .styled-select.slate.month, .styled-select.slate.state,     .msform .zip-code {
+	    width: 100%!important;
+	}
+	.styled-select.slate.state{
+	    margin-bottom: 5px!important;
+	}
+	.msform .zip-code{
+		margin-left: 0px!important;
+	}
+}	
+@media only screen and (min-width:768px) and (max-width: 991px){
+	.msform .zip-code {
+    	width: 100%;
+    	margin-left:0px;
+    }
+}
+@media screen and (max-width: 991px) {
+	h2{
+		text-align:center;
+	}
+    .tabordion section label{
+    	width:100%
+    }
+    .first-tab{
+    	margin-top:350px;
+    }
+    .tabordion section article{
+    	margin-top:-335px;
+    	width: 100%;
+    }
+    .swipe {
+		margin-top:0px;
+	}
+	.swipe img{
+	    width: 240px;
+    	height: 320px;
+    }
+    .swipe .nav{
+    	top:35%;
+    }
+	.links_left, .links_center, .links_right  {
+	text-align:center;
+}
+}
+@media screen and (max-width: 767px) {
+	h1{
+		text-align:center;
+	}
+	.sale-header img{
+		margin-left: auto;
+    	margin-right: auto;
+    	display: block;
+	}
+	#slides{
+		width:350px;
+	}
+	.msform{
+		margin-top:40px;
+	}
+
+}
+@media screen and (max-width: 433px) {
+	.expiration-date{
+		width:100%;
+		text-align:left;
+	}
+	.styled-select.slate.month{
+		width:48%;
+	}
+	.styled-select.slate.year{
+		width:47%;
+	}
+}	
+@media screen and (max-width: 433px) {
+	.swipe img{
+		margin-left: 8%;
+	}
+}	
+@media screen and (max-width: 377px) {
+	.msform .action-button{
+		position: relative;
+		width: 100%;
+	}
+	.msform .action-button.next{
+		margin-left:15px;
+	}
+	.msform .action-button.previous{
+		margin-left:-15px;
+	}
+}	
