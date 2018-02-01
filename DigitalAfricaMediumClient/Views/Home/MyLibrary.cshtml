@@ -20,12 +20,13 @@
     </section>
 </div>
 <div js-target="tabs" class="tab-bar--tabs flex-row-medium phm" folderlist-tab-name="library" state-path="/my-library/" state-pop="">
-    <a href="#" js-target="tab" class="tab-bar--tab flex-col-medium justify-center flex-1 medium-text-center line-height-tight active" data-stream-name="library">My Library</a>
-    <a href="#" js-target="tab" class="tab-bar--tab flex-col-medium justify-center flex-1 medium-text-center line-height-tight " data-stream-name="topics">Topic Feeds</a>
-    <a href="#" js-target="tab" class="tab-bar--tab flex-col-medium justify-center flex-1 medium-text-center line-height-tight " data-stream-name="purchases">Purchases</a>
-    <a href="#" js-target="tab" class="tab-bar--tab flex-col-medium justify-center flex-1 medium-text-center line-height-tight " data-stream-name="activity">Activity</a>
-    <a href="#" js-target="tab" class="tab-bar--tab flex-col-medium justify-center flex-1 medium-text-center line-height-tight " data-stream-name="settings">Account Settings</a>
-    <a href="#" js-target="tab" class="tab-bar--tab flex-col-medium justify-center flex-1 medium-text-center line-height-tight " data-stream-name="preferences">Email Preferences</a>
+    @Html.ActionLink("My Library", "MyLibrary", new { @class = "tab-bar--tab flex-col-medium justify-center flex-1 medium-text-center line-height-tight active" })
+    @Html.ActionLink("Topic Feeds", "TopicFeeds", new { @class = "tab-bar--tab flex-col-medium justify-center flex-1 medium-text-center line-height-tight active" })
+    @Html.ActionLink("Purchases", "Purchases", new { @class = "tab-bar--tab flex-col-medium justify-center flex-1 medium-text-center line-height-tight active" })
+    @Html.ActionLink("Activity", "Activity", new { @class = "tab-bar--tab flex-col-medium justify-center flex-1 medium-text-center line-height-tight active" })
+    @Html.ActionLink("Account Settings", "AccountSettings", new { @class = "tab-bar--tab flex-col-medium justify-center flex-1 medium-text-center line-height-tight active" })
+    @Html.ActionLink("Email Preferences", "EmailPreferences", new { @class = "tab-bar--tab flex-col-medium justify-center flex-1 medium-text-center line-height-tight active" })
+    
 </div>
         <section>
             <stream-content data-stream-name="library" class="stream-content active">
@@ -60,7 +61,7 @@
                                                     <div class="row">
                                                         <div class="hbr-checkbox left mrl mln hide-for-small"></div>
                                                         <div class="small-10 columns mtl text-center">
-                                                            <h3 class="subheader darker-gray">Hi, <strong>Richard Iyama</strong>. Welcome to your personal HBR Library.</h3>
+                                                            <h3 class="subheader darker-gray">Hi, <strong>Richard Iyama</strong>. Welcome to your personal NBR Library.</h3>
                                                             <h5 class="subheader darker-gray mtm mbl line-height-normal">Consider this your own personal space for collecting, organizing, and sharing your favorite content from Harvard Business Review. Use the folder icon <small class="icon icon-file-text-o primary-color"></small> on any piece of content to add it to your library.</h5>
                                                             <a href="/" class="button--black">Go to Home Page</a>
                                                         </div>

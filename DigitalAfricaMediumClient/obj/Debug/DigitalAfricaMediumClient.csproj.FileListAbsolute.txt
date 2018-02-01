@@ -95,3 +95,4 @@ C:\Users\Richard Iyama\Documents\Visual Studio 2017\Projects\DigitalMediumAfrica
 C:\Users\Richard Iyama\Documents\Visual Studio 2017\Projects\DigitalMediumAfrica\DigitalAfricaMediumClient\obj\Debug\DigitalAfricaMediumClient.pdb
 C:\Users\Richard Iyama\Documents\Visual Studio 2017\Projects\DigitalMediumAfrica\DigitalAfricaMediumClient\bin\System.Net.Http.Formatting.dll
 C:\Users\Richard Iyama\Documents\Visual Studio 2017\Projects\DigitalMediumAfrica\DigitalAfricaMediumClient\obj\Debug\DigitalAfricaMediumClient.csprojResolveAssemblyReference.cache
+C:\Users\Richard Iyama\Documents\Visual Studio 2017\Projects\DigitalMediumAfrica\DigitalAfricaMediumClient\obj\Debug\DigitalAfricaMediumClient.csproj.CoreCompileInputs.cache

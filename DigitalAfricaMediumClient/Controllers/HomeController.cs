@@ -190,5 +190,40 @@ namespace DigitalAfricaMediumClient.Controllers
 
             return View();
         }
+
+        public ActionResult TopicFeeds()
+        {
+            ViewBag.Message = "Your Blog page.";
+
+            return View();
+        }
+
+        public ActionResult Purchases()
+        {
+            ViewBag.Message = "Your Blog page.";
+
+            return View();
+        }
+
+        public ActionResult Activity()
+        {
+            ViewBag.Message = "Your Blog page.";
+
+            return View();
+        }
+        public ActionResult AccountSettings()
+        {
+            ViewBag.Message = "Your Blog page.";
+
+            return View();
+        }
+        public ActionResult EmailPreferences()
+        {
+            ViewBag.Message = "Your Blog page.";
+
+            return View();
+        }
+
+
     }
 }

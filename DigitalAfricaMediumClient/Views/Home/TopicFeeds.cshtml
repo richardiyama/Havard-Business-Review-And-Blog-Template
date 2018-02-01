@@ -1,0 +1,125 @@
+﻿
+@{
+    Html.RenderPartial("NaijaReviewHeader");
+}
+
+@{
+    ViewBag.Title = "TopicFeeds";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+<div class="row">
+    <div class="content-area column">
+        <div class="row">
+            <div class="medium-3 columns">
+                <div class="upcase font-bold hide-for-small mt-large3 mbm">TOPIC FEEDS</div>
+                <topic-menu style="display: block"><div class="folder-list" data-reactid=".1"><a href="#" class="folder-list--opener flex-row justify-between pvm prm pll link--white" data-reactid=".1.0"><span data-reactid=".1.0.0">Everything</span><span class="icon icon-caret-right font-size-xlarge" data-reactid=".1.0.1"></span></a><div class="folder-list--folders" data-reactid=".1.1"><div class="folder-list--folder prm active" data-reactid=".1.1.0:0"><div class="flex-row" data-reactid=".1.1.0:0.0"><a href="#" class="folder-list--folder-link flex-1 pvm" data-reactid=".1.1.0:0.0.0">Everything</a><span data-reactid=".1.1.0:0.0.1"></span></div></div><div class="folder-list--folder pvm prm" data-reactid=".1.1.1"><a href="/topics" class="mbn button--black expand" data-reactid=".1.1.1.0">FIND MORE</a></div></div></div></topic-menu>
+            </div>
+            <div class="medium-9 columns">
+                <stream-list class="stream-list reset-content-areas mt-large3" data-stream-endpoint="components/myhbr/following" data-selectable="false" data-ads-enabled="false" data-allow-unlimited="true" data-page-number="0">
+                    <ul>
+                        <li>
+                            <h3 class="subheader darker-gray mtm text-center">Welcome to your Topics, <strong>Richard</strong></h3>
+                            <h5 class="subheader darker-gray mbl mtm text-center line-height-normal">Welcome to your topic feeds, where you follow any of our 180+ topics and get a fresh daily dose of <em>Harvard Business Review</em> content related to your interests. To get started, select a few topics you're interested in. You can explore all of our topics using the "Find More" button to the left.</h5>
+                            <div class="row mt-large2">
+
+                                <div class="small-12 medium-6 columns">
+
+                                    <div class="row mtm">
+                                        <div class="small-7 columns"><h5>Strategy</h5></div>
+                                        <div class="small-5 columns">
+                                            <follow-subscribe class="follow-topic" data-name="Strategy" data-activity="topic">
+                                                <div class="follow-this"><a href="#" js-target="enable-this" data-method="follow"><i class="icon icon-follow-this"></i> <strong>Follow</strong> this</a></div>
+                                                <div class="unfollow-this"><a href="#" js-target="disable-this" data-method="unfollow"><i class="icon icon-unfollow-this"></i> <strong>Following</strong></a></div>
+                                            </follow-subscribe>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mtm">
+                                        <div class="small-7 columns"><h5>Negotiations</h5></div>
+                                        <div class="small-5 columns">
+                                            <follow-subscribe class="follow-topic" data-name="Negotiations" data-activity="topic">
+                                                <div class="follow-this"><a href="#" js-target="enable-this" data-method="follow"><i class="icon icon-follow-this"></i> <strong>Follow</strong> this</a></div>
+                                                <div class="unfollow-this"><a href="#" js-target="disable-this" data-method="unfollow"><i class="icon icon-unfollow-this"></i> <strong>Following</strong></a></div>
+                                            </follow-subscribe>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mtm">
+                                        <div class="small-7 columns"><h5>Managing Yourself</h5></div>
+                                        <div class="small-5 columns">
+                                            <follow-subscribe class="follow-topic" data-name="Managing Yourself" data-activity="topic">
+                                                <div class="follow-this"><a href="#" js-target="enable-this" data-method="follow"><i class="icon icon-follow-this"></i> <strong>Follow</strong> this</a></div>
+                                                <div class="unfollow-this"><a href="#" js-target="disable-this" data-method="unfollow"><i class="icon icon-unfollow-this"></i> <strong>Following</strong></a></div>
+                                            </follow-subscribe>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mtm">
+                                        <div class="small-7 columns"><h5>Economy</h5></div>
+                                        <div class="small-5 columns">
+                                            <follow-subscribe class="follow-topic" data-name="Economy" data-activity="topic">
+                                                <div class="follow-this"><a href="#" js-target="enable-this" data-method="follow"><i class="icon icon-follow-this"></i> <strong>Follow</strong> this</a></div>
+                                                <div class="unfollow-this"><a href="#" js-target="disable-this" data-method="unfollow"><i class="icon icon-unfollow-this"></i> <strong>Following</strong></a></div>
+                                            </follow-subscribe>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="small-12 medium-6 columns">
+
+                                    <div class="row mtm">
+                                        <div class="small-7 columns"><h5>Leading Teams</h5></div>
+                                        <div class="small-5 columns">
+                                            <follow-subscribe class="follow-topic" data-name="Leading Teams" data-activity="topic">
+                                                <div class="follow-this"><a href="#" js-target="enable-this" data-method="follow"><i class="icon icon-follow-this"></i> <strong>Follow</strong> this</a></div>
+                                                <div class="unfollow-this"><a href="#" js-target="disable-this" data-method="unfollow"><i class="icon icon-unfollow-this"></i> <strong>Following</strong></a></div>
+                                            </follow-subscribe>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mtm">
+                                        <div class="small-7 columns"><h5>Decision Making</h5></div>
+                                        <div class="small-5 columns">
+                                            <follow-subscribe class="follow-topic" data-name="Decision Making" data-activity="topic">
+                                                <div class="follow-this"><a href="#" js-target="enable-this" data-method="follow"><i class="icon icon-follow-this"></i> <strong>Follow</strong> this</a></div>
+                                                <div class="unfollow-this"><a href="#" js-target="disable-this" data-method="unfollow"><i class="icon icon-unfollow-this"></i> <strong>Following</strong></a></div>
+                                            </follow-subscribe>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mtm">
+                                        <div class="small-7 columns"><h5>Innovation</h5></div>
+                                        <div class="small-5 columns">
+                                            <follow-subscribe class="follow-topic" data-name="Innovation" data-activity="topic">
+                                                <div class="follow-this"><a href="#" js-target="enable-this" data-method="follow"><i class="icon icon-follow-this"></i> <strong>Follow</strong> this</a></div>
+                                                <div class="unfollow-this"><a href="#" js-target="disable-this" data-method="unfollow"><i class="icon icon-unfollow-this"></i> <strong>Following</strong></a></div>
+                                            </follow-subscribe>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mtm">
+                                        <div class="small-7 columns"><h5>Marketing</h5></div>
+                                        <div class="small-5 columns">
+                                            <follow-subscribe class="follow-topic" data-name="Marketing" data-activity="topic">
+                                                <div class="follow-this"><a href="#" js-target="enable-this" data-method="follow"><i class="icon icon-follow-this"></i> <strong>Follow</strong> this</a></div>
+                                                <div class="unfollow-this"><a href="#" js-target="disable-this" data-method="unfollow"><i class="icon icon-unfollow-this"></i> <strong>Following</strong></a></div>
+                                            </follow-subscribe>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <a href="#" class="button--black mtl" js-target="reload-stream-list">Done</a>
+                        </li>
+                    </ul>
+                </stream-list>
+            </div>
+        </div>
+    </div>
+</div>

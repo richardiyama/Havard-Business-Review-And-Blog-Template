@@ -1,0 +1,160 @@
+﻿@{
+    Html.RenderPartial("NaijaReviewHeader");
+}
+
+@{
+    ViewBag.Title = "EmailPreferences";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div class="row">
+    <div class="content-area column">
+
+        <div class="row">
+            <div class="small-12 columns">
+                <h4 class="section-label mtl text-left">My Newsletters</h4>
+            </div>
+        </div>
+
+        <div class="tile-container">
+            <div class="flex-row-wrap newsletter-tile-container ">
+                <div class="flex-col justify-between has-borders mvm pam backdrop-white ">
+                    <div>
+                        <div style="color: #0CAFFC">
+                            <svg class="size-64x64 svg-fill-current"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/resources/css/images/icons.svg#son"></use></svg>
+                        </div>
+                        <h3>The Insider</h3>
+                        <div class="dek mbm">A weekly, subscriber-only newsletter curated by editors to help you keep tabs on the content that matters most to you.</div>
+                    </div>
+                    <follow-subscribe class="follow-topic follow-topic-subscriber" data-name="The Insider" data-activity="newsletter">
+                        <div class="is-inline-block" data-help-box-target="insider-enl">
+                            <div class="follow-this"><a href="#" js-target="enable-this" data-method="subscribe"><i class="icon icon-follow-this"></i> <strong>Sign up</strong></a></div>
+                            <div class="unfollow-this"><a href="#" js-target="disable-this" data-method="unsubscribe"><i class="icon icon-unfollow-this"></i> <strong>Signed up</strong></a></div>
+                            <div class="login-this"><a href="/sign-in" js-target="sign-in-this"><i class="icon icon-follow-this"></i> <strong>Sign in to Sign up</strong></a></div>
+                            <div class="subscribe-this"><a href="/subscribe"><i class="icon icon-follow-this"></i> <strong>Subscribe to Sign up</strong></a></div>
+                        </div>
+                    </follow-subscribe>
+                </div>
+                <div class="flex-col justify-between has-borders mvm pam backdrop-white ">
+                    <div>
+                        <div style="color: #FB6405">
+                            <svg class="size-64x64 svg-fill-current"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/resources/css/images/icons.svg#gears"></use></svg>
+                        </div>
+                        <h3>Management Tip of the Day</h3>
+                        <div class="dek mbm">Quick, practical management advice to help you do your job better, delivered weekdays.</div>
+                    </div>
+                    <follow-subscribe class="follow-topic " data-name="Management Tip of the Day" data-activity="newsletter">
+                        <div class="follow-this"><a href="#" js-target="enable-this" data-method="subscribe"><i class="icon icon-follow-this"></i> <strong>Sign up</strong></a></div>
+                        <div class="unfollow-this"><a href="#" js-target="disable-this" data-method="unsubscribe"><i class="icon icon-unfollow-this"></i> <strong>Signed up</strong></a></div>
+                    </follow-subscribe>
+                </div>
+                <div class="flex-col justify-between has-borders mvm pam backdrop-white ">
+                    <div>
+                        <div style="color: #F00000">
+                            <svg class="size-64x64 svg-fill-current"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/resources/css/images/icons.svg#flaming-notebook"></use></svg>
+                        </div>
+                        <h3>Weekly Hotlist</h3>
+                        <div class="dek mbm">A roundup of Harvard Business Review's most popular ideas and advice, delivered weekly.</div>
+                    </div>
+                    <follow-subscribe class="follow-topic " data-name="Weekly Hotlist" data-activity="newsletter">
+                        <div class="follow-this"><a href="#" js-target="enable-this" data-method="subscribe"><i class="icon icon-follow-this"></i> <strong>Sign up</strong></a></div>
+                        <div class="unfollow-this"><a href="#" js-target="disable-this" data-method="unsubscribe"><i class="icon icon-unfollow-this"></i> <strong>Signed up</strong></a></div>
+                    </follow-subscribe>
+                </div>
+                <div class="flex-col justify-between has-borders mvm pam backdrop-white ">
+                    <div>
+                        <div style="color: #03C1ED">
+                            <svg class="size-64x64 svg-fill-current"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/resources/css/images/icons.svg#alarm-clock"></use></svg>
+                        </div>
+                        <h3>The Daily Alert</h3>
+                        <div class="dek mbm">Links to all the digital articles published in the last 24 hours.</div>
+                    </div>
+                    <follow-subscribe class="follow-topic " data-name="The Daily Alert" data-activity="newsletter">
+                        <div class="follow-this"><a href="#" js-target="enable-this" data-method="subscribe"><i class="icon icon-follow-this"></i> <strong>Sign up</strong></a></div>
+                        <div class="unfollow-this"><a href="#" js-target="disable-this" data-method="unsubscribe"><i class="icon icon-unfollow-this"></i> <strong>Signed up</strong></a></div>
+                    </follow-subscribe>
+                </div>
+                <div class="flex-col justify-between has-borders mvm pam backdrop-white ">
+                    <div>
+                        <div style="color: #0284FD">
+                            <svg class="size-64x64 svg-fill-current"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/resources/css/images/icons.svg#fish"></use></svg>
+                        </div>
+                        <h3>Leadership</h3>
+                        <div class="dek mbm">Must-reads from our most recent articles on leadership and managing people, delivered once a month.</div>
+                    </div>
+                    <follow-subscribe class="follow-topic " data-name="Leadership" data-activity="newsletter">
+                        <div class="follow-this"><a href="#" js-target="enable-this" data-method="subscribe"><i class="icon icon-follow-this"></i> <strong>Sign up</strong></a></div>
+                        <div class="unfollow-this"><a href="#" js-target="disable-this" data-method="unsubscribe"><i class="icon icon-unfollow-this"></i> <strong>Signed up</strong></a></div>
+                    </follow-subscribe>
+                </div>
+                <div class="flex-col justify-between has-borders mvm pam backdrop-white ">
+                    <div>
+                        <div style="color: #B20303">
+                            <svg class="size-64x64 svg-fill-current"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/resources/css/images/icons.svg#magazine"></use></svg>
+                        </div>
+                        <h3>Best of the Issue</h3>
+                        <div class="dek mbm">The editor of Harvard Business Review picks highlights from each new issue of the magazine.</div>
+                    </div>
+                    <follow-subscribe class="follow-topic " data-name="Best of the Issue" data-activity="newsletter">
+                        <div class="follow-this"><a href="#" js-target="enable-this" data-method="subscribe"><i class="icon icon-follow-this"></i> <strong>Sign up</strong></a></div>
+                        <div class="unfollow-this"><a href="#" js-target="disable-this" data-method="unsubscribe"><i class="icon icon-unfollow-this"></i> <strong>Signed up</strong></a></div>
+                    </follow-subscribe>
+                </div>
+                <div class="flex-col justify-between has-borders mvm pam backdrop-white ">
+                    <div>
+                        <div style="color: #872EBF">
+                            <svg class="size-64x64 svg-fill-current"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/resources/css/images/icons.svg#rocket"></use></svg>
+                        </div>
+                        <h3>Technology &amp; Innovation</h3>
+                        <div class="dek mbm">Must-reads from our most recent articles on technology and innovation, delivered once a month.</div>
+                    </div>
+                    <follow-subscribe class="follow-topic " data-name="Technology &amp; Innovation" data-activity="newsletter">
+                        <div class="follow-this"><a href="#" js-target="enable-this" data-method="subscribe"><i class="icon icon-follow-this"></i> <strong>Sign up</strong></a></div>
+                        <div class="unfollow-this"><a href="#" js-target="disable-this" data-method="unsubscribe"><i class="icon icon-unfollow-this"></i> <strong>Signed up</strong></a></div>
+                    </follow-subscribe>
+                </div>
+                <div class="flex-col justify-between has-borders mvm pam backdrop-white ">
+                    <div>
+                        <div style="color: #014A07">
+                            <svg class="size-64x64 svg-fill-current"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/resources/css/images/icons.svg#knot"></use></svg>
+                        </div>
+                        <h3>Strategy &amp; Execution</h3>
+                        <div class="dek mbm">Must-reads from our most recent articles on strategy and execution, delivered once a month.</div>
+                    </div>
+                    <follow-subscribe class="follow-topic " data-name="Strategy &amp; Execution" data-activity="newsletter">
+                        <div class="follow-this"><a href="#" js-target="enable-this" data-method="subscribe"><i class="icon icon-follow-this"></i> <strong>Sign up</strong></a></div>
+                        <div class="unfollow-this"><a href="#" js-target="disable-this" data-method="unsubscribe"><i class="icon icon-unfollow-this"></i> <strong>Signed up</strong></a></div>
+                    </follow-subscribe>
+                </div>
+                <div class="flex-col justify-between has-borders mvm pam backdrop-white ">
+                    <div>
+                        <div style="color: #FFAA00">
+                            <svg class="size-64x64 svg-fill-current"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/resources/css/images/icons.svg#purse"></use></svg>
+                        </div>
+                        <h3>Finance &amp; Economy</h3>
+                        <div class="dek mbm">Must-reads from our most recent articles on finance and the economy, delivered once a month.</div>
+                    </div>
+                    <follow-subscribe class="follow-topic " data-name="Finance &amp; Economy" data-activity="newsletter">
+                        <div class="follow-this"><a href="#" js-target="enable-this" data-method="subscribe"><i class="icon icon-follow-this"></i> <strong>Sign up</strong></a></div>
+                        <div class="unfollow-this"><a href="#" js-target="disable-this" data-method="unsubscribe"><i class="icon icon-unfollow-this"></i> <strong>Signed up</strong></a></div>
+                    </follow-subscribe>
+                </div>
+                <div class="flex-col justify-between has-borders mvm pam backdrop-white ">
+                    <div>
+                        <div style="color: #01BAB3">
+                            <svg class="size-64x64 svg-fill-current"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/resources/css/images/icons.svg#book"></use></svg>
+                        </div>
+                        <h3>Business Bookshelf</h3>
+                        <div class="dek mbm">Summaries and excerpts of the latest books, special offers, and more from Harvard Business Review Press.</div>
+                    </div>
+                    <follow-subscribe class="follow-topic " data-name="Business Bookshelf" data-activity="newsletter">
+                        <div class="follow-this"><a href="#" js-target="enable-this" data-method="subscribe"><i class="icon icon-follow-this"></i> <strong>Sign up</strong></a></div>
+                        <div class="unfollow-this"><a href="#" js-target="disable-this" data-method="unsubscribe"><i class="icon icon-unfollow-this"></i> <strong>Signed up</strong></a></div>
+                    </follow-subscribe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

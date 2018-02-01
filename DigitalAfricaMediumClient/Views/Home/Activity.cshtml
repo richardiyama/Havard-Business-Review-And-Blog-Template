@@ -1,0 +1,67 @@
+﻿
+
+
+@{
+    ViewBag.Title = "Activity";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@{
+    Html.RenderPartial("NaijaReviewHeader");
+}
+
+<div class="row">
+    <div class="content-area column">
+        <div class="row">
+            <div class="medium-3 columns">
+                <div class="upcase font-bold hide-for-small mt-large3 mbm">ACTIVITY</div>
+                <tab-bar class="folder-list">
+                    <a href="#" js-target="tab-opener" class="folder-list--opener flex-row justify-between pvm prm pll link--white">
+                        <span js-target="tab-opener-text">
+                            Sharing History
+                        </span>
+                        <span class="icon icon-caret-right font-size-xlarge"></span>
+                    </a>
+                    <div js-target="tabs" class="folder-list--folders" folderlist-tab-name="library" state-path="/my-library/" state-pop="">
+                        <div class="folder-list--folder" js-target="tab" data-stream-endpoint="user/history">
+                            <a href="#" class="is-block folder-list--folder-link prm pvm">All Activity</a>
+                        </div>
+                        <div class="folder-list--folder" js-target="tab" data-stream-endpoint="user/history/read">
+                            <a href="#" class="is-block folder-list--folder-link prm pvm">Reading History</a>
+                        </div>
+                        <div class="folder-list--folder active" js-target="tab" data-stream-endpoint="user/history/shared">
+                            <a href="#" class="is-block folder-list--folder-link prm pvm">Sharing History</a>
+                        </div>
+                    </div>
+                </tab-bar>
+            </div>
+            <div class="medium-9 columns mt-large2">
+                <stream-list class="stream-list ptn reset-content-areas" data-stream-endpoint="user/history" data-ads-enabled="false" data-allow-unlimited="true">
+                    <section>
+                        <div class="row">
+                            <div class="content-area column">
+                                <div class="row">
+                                    <div class="small-12 columns">
+                                        <div class="row">
+                                            <div class="small-10 small-offset-1 columns mtl mbm text-center">
+                                                <h3 class="subheader darker-gray mtn">Welcome to Your Activity Feed</h3>
+                                                <h5 class="subheader darker-gray mtm mbl line-height-normal">Here you can find all the things that you've read and shared while signed in to your account. To get started, visit our homepage to see what our editors are focused on today, or check out content on one of our 150+ topics.</h5>
+
+                                                <div class="mvl">
+                                                    <a href="/" class="button--black mrm">VISIT HOME PAGE</a>
+                                                    <a href="/topics" class="button--light-gray mrm">SEE OUR TOPICS</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </stream-list>
+            </div>
+        </div>
+    </div>
+</div>
+
